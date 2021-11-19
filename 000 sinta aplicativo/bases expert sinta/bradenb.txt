@@ -1,0 +1,1540 @@
+--------------------------------------------------------------------------------
+SOBRE O SISTEMA ESPECIALISTA
+  -- Nome:    Escala De Braden
+  -- Autores: Farias P. Edquel
+  -- Resumo:
+     Sistema Especialista de Apoio Ao Enfermeiro
+      Na formulação do S.A.E.
+     Escala de avaliação de risco de 
+     Ulcera por Pressão
+
+Operador de maior precedência: conjunção
+Fator de confiança mínimo para aceitação de regra: 50
+
+SOBRE OS ARQUIVOS
+  Arquivo original: D:\arquivo\sistemas de informação\0 PESQUISA\SINTA\bradenb.bcm
+  O sistema não possui recursos de ajuda.
+--------------------------------------------------------------------------------
+
+VARIÁVEIS
+
+  1 Percepção Sensorial
+    Valores:
+      (4) Nenhuma limitação
+      (2) Muito limitada
+      (3) levemente limitada
+      (1) Totalmente limitada
+    Tipo:
+      multivalorada
+  2 Umidade
+    Valores:
+      (4) Raramente Umida
+      (2) Muito Umida
+      (3) Ocasionalmente Umida
+      (1) Constantemente Umida
+    Tipo:
+      multivalorada
+  3 Atividade Fisica
+    Valores:
+      (4) Caminha frequentemente
+      (2) Restrito a cadeira
+      (3) Caminha ocasionalmente
+      (1) Acamado
+    Tipo:
+      multivalorada
+  4 Mobilidade
+    Valores:
+      (2) Muito limitado
+      (4) Não apresenta limitações
+      (1) Completamente imobilizado
+      (3) Levemente limitado
+    Tipo:
+      multivalorada
+  5 Nutrição
+    Valores:
+      (2) Provavelmente inadequado
+      (4) Excelente
+      (1) Muito Pobre
+      (3) Adequado
+    Tipo:
+      multivalorada
+  6 Cisalhamento e fricção
+    Valores:
+      (2) Potencial para problema
+      (1) Problema
+      (3) Nenhum problema aparente
+    Tipo:
+      multivalorada
+  Risco de Ulcera por Pressão
+    Valores:
+       > que 16 Risco minimo
+      < que 12 Risco elevado
+      de 13 a 15 Risco moderado
+    Tipo:
+      multivalorada
+  Soma
+    Valores:
+      1;25
+    Tipo:
+      numérica
+
+OBJETIVOS
+
+  Soma
+  Risco de Ulcera por Pressão
+
+REGRAS
+
+  Regra 1
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 06 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 2
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 3
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 07 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 4
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 7 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 5
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 8 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 6
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 8 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 7
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 8 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 8
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 8 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 9
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 8 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 10
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 8 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 11
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 08 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 12
+    SE 1 Percepção Sensorial = (3) levemente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 08 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 13
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 14
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 9 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 15
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    OU 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    OU 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 16
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 9 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 17
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 9 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 18
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 19
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    OU 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 20
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 21
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 22
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 23
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 24
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 25
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 26
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (4) Raramente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 27
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (4) Caminha frequentemente
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 28
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (4) Não apresenta limitações
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 29
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (4) Excelente
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 30
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 31
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 32
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 33
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 34
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 35
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 36
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 09 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 37
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 38
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 10 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 39
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 10 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 40
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 10 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 41
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (4) Excelente
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 10 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 42
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (4) Raramente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 10 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 43
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (4) Caminha frequentemente
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 44
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (4) Não apresenta limitações
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 45
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (4) Excelente
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 46
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (4) Raramente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 47
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    OU 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 48
+    SE 1 Percepção Sensorial = (3) levemente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 49
+    SE 1 Percepção Sensorial = (3) levemente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 50
+    SE 1 Percepção Sensorial = (3) levemente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 51
+    SE 1 Percepção Sensorial = (3) levemente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 52
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 53
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 54
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 55
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 56
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 57
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 58
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 59
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 60
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 61
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 62
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 63
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 64
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 65
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 14 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 66
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 14 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 67
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 14 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 68
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 15 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 69
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (4) Não apresenta limitações
+    E  5 Nutrição = (4) Excelente
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 17 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 70
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 11 CNF 90%
+          Risco de Ulcera por Pressão = < que 12 Risco elevado CNF 90%
+
+  Regra 71
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (1) Constantemente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 14 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 72
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 14 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 73
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 15 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 74
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 15 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 75
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 15 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 76
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 15 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 77
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 16 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 78
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (4) Raramente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 17 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 79
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (4) Caminha frequentemente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 17 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 80
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (4) Não apresenta limitações
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 17 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 81
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (4) Excelente
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 17 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 82
+    SE 1 Percepção Sensorial = (1) Totalmente limitada
+    E  2 Umidade = (4) Raramente Umida
+    E  3 Atividade Fisica = (4) Caminha frequentemente
+    E  4 Mobilidade = (4) Não apresenta limitações
+    E  5 Nutrição = (4) Excelente
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 20 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 83
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 12 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 84
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 14 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 85
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (4) Não apresenta limitações
+    E  5 Nutrição = (1) Muito Pobre
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 12 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 86
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 12 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 87
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 13 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 88
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (4) Excelente
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 13 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 89
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 13 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 90
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (1) Acamado
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 12 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 91
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (1) Problema
+    ENTÃO Soma = 16 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 92
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 15 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 93
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 17 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 94
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 17 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 95
+    SE 1 Percepção Sensorial = (2) Muito limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 12 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 96
+    SE 1 Percepção Sensorial = (3) levemente limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 13 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 97
+    SE 1 Percepção Sensorial = (3) levemente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 14 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 98
+    SE 1 Percepção Sensorial = (3) levemente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 15 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 99
+    SE 1 Percepção Sensorial = (3) levemente limitada
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 15 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 100
+    SE 1 Percepção Sensorial = (3) levemente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (4) Caminha frequentemente
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 16 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 101
+    SE 1 Percepção Sensorial = (3) levemente limitada
+    E  2 Umidade = (4) Raramente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 15 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 102
+    SE 1 Percepção Sensorial = (3) levemente limitada
+    E  2 Umidade = (4) Raramente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 19 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 103
+    SE 1 Percepção Sensorial = (3) levemente limitada
+    E  2 Umidade = (4) Raramente Umida
+    E  3 Atividade Fisica = (4) Caminha frequentemente
+    E  4 Mobilidade = (4) Não apresenta limitações
+    E  5 Nutrição = (4) Excelente
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 22 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 104
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (4) Caminha frequentemente
+    E  4 Mobilidade = (4) Não apresenta limitações
+    E  5 Nutrição = (4) Excelente
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 22 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 105
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (4) Excelente
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 17 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 106
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (4) Raramente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (4) Não apresenta limitações
+    E  5 Nutrição = (4) Excelente
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 22 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 107
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (4) Raramente Umida
+    E  3 Atividade Fisica = (4) Caminha frequentemente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (4) Excelente
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 22 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 108
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (4) Raramente Umida
+    E  3 Atividade Fisica = (4) Caminha frequentemente
+    E  4 Mobilidade = (4) Não apresenta limitações
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 22 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 109
+    SE 1 Percepção Sensorial = (3) levemente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (4) Não apresenta limitações
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 17 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 110
+    SE 1 Percepção Sensorial = (3) levemente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 16 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 111
+    SE 1 Percepção Sensorial = (3) levemente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 17 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 112
+    SE 1 Percepção Sensorial = (3) levemente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (4) Excelente
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 18 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 113
+    SE 1 Percepção Sensorial = (3) levemente limitada
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 18 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 114
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (2) Muito Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (2) Muito limitado
+    E  5 Nutrição = (2) Provavelmente inadequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 14 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 115
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (2) Restrito a cadeira
+    E  4 Mobilidade = (1) Completamente imobilizado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (2) Potencial para problema
+    ENTÃO Soma = 15 CNF 90%
+          Risco de Ulcera por Pressão = de 13 a 15 Risco moderado CNF 90%
+
+  Regra 116
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (3) Ocasionalmente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 19 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 117
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (4) Raramente Umida
+    E  3 Atividade Fisica = (3) Caminha ocasionalmente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 20 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 118
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (4) Raramente Umida
+    E  3 Atividade Fisica = (4) Caminha frequentemente
+    E  4 Mobilidade = (3) Levemente limitado
+    E  5 Nutrição = (3) Adequado
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 21 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+  Regra 119
+    SE 1 Percepção Sensorial = (4) Nenhuma limitação
+    E  2 Umidade = (4) Raramente Umida
+    E  3 Atividade Fisica = (4) Caminha frequentemente
+    E  4 Mobilidade = (4) Não apresenta limitações
+    E  5 Nutrição = (4) Excelente
+    E  6 Cisalhamento e fricção = (3) Nenhum problema aparente
+    ENTÃO Soma = 23 CNF 90%
+          Risco de Ulcera por Pressão =  > que 16 Risco minimo CNF 90%
+
+PERGUNTAS
+
+  Variável:1 Percepção Sensorial
+     Pergunta:" 01 - PERCEPÇÃO SENSORIAL: (escolha apenas uma alternativa) Habilidade de responder significativamente a pressão relacionada com o desconforto "
+     Motivo:"A escolha de mais de uma alternativa levara o sistema a um resultado errado
+  Variável:2 Umidade
+     Pergunta:"02 - UMIDADE (escolha apenas uma alternativa) : Grau ao qual a pele esta exposta a umidade"
+     Motivo:"A escolha de mais de uma alternativa levara o sistema a um resultado errado
+  Variável:3 Atividade Fisica
+     Pergunta:"03 - ATIVIDADE FISICA: (escolha apenas uma alternativa) Grau de atividade fisica"
+     Motivo:"A escolha de mais de uma alternativa levara o sistema a um resultado errado
+  Variável:4 Mobilidade
+     Pergunta:"04 -  MOBILIDADE(escolha apenas uma alternativa): Habilidade de mudar e controlar as posiçoes corporais"
+     Motivo:"A escolha de mais de uma alternativa levara o sistema a um resultado errado
+  Variável:5 Nutrição
+     Pergunta:"05 - NUTRIÇÃO (escolha apenas uma alternativa) Padrão usual de ingestão alimentar"
+     Motivo:"A escolha de mais de uma alternativa levara o sistema a um resultado errado
+  Variável:6 Cisalhamento e fricção
+     Pergunta:"06 - FRIÇCÃO E CISALHAMENTO (escolha apenas uma alternativa)"
+     Motivo:"A escolha de mais de uma alternativa levara o sistema a um resultado errado
+  Variável:Soma
+     Pergunta:"A pontuação na escala de Bradem é de:"
+
+--------------------------------------------------------------------------------
+Gerado com o Expert SINTA versão 1.1b
+(c) 1997 - Universidade Federal do Ceará
+           Laboratório de Inteligência Artificial
+           LIA/UFC
+--------------------------------------------------------------------------------

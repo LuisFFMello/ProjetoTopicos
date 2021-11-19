@@ -1,0 +1,458 @@
+--------------------------------------------------------------------------------
+SOBRE O SISTEMA ESPECIALISTA
+  -- Nome:    SECAJU - Sistema de Diagnóstico de Pragas e Doenças do Cajueiro
+  -- Autores: CNPAT / EMBRAPA / Grupo SINTA
+  -- Resumo:
+     	Este  sistema  reúne,  de  forma  aplicável,  o  conhecimento  de 
+     especialistas em pragas e doenças da cultura do cajueiro. Seu objetivo é 
+     realizar a diagnose de algum cajueiral afetado e prover as recomendações de  
+     controle  fitossanitário.  A  diagnose  é  feita  em  dois  níveis: categórica e 
+     presuntiva. 
+     
+     	O SECAJU destina-se a produtores de caju,  extensionistas rurais, e 
+     pesquisadores e estudantes das áreas de entomologia e fitopatologia.
+     
+     	As pragas que podem ser diagnosticadas pelo SECAJU são:
+     
+      1. traça das castanhas
+      2. broca das pontas
+      3. pulgão das inflorescências
+      4. eriofiídeo das flores
+      5. tripes
+      6. lagartas desfolhadoras (saia justa, verde, das folhas e véu de noiva)
+      7. besouro vermelho
+      8. mosca branca
+      9. larva do broto terminal
+     10. cigarrinha
+     
+     	Existem outras pragas (ácaros) associadas à cultura do cajueiro que 
+     não tem ainda importância relevante comprovada, tais como os tenuipalpídeos, 
+     os tetraníquideos e o eriofiídeo das folhas, os quais só poderão ser vistos com o 
+     auxílio de microscópio estereoscópico (lupa) ou lente de aumento.
+     
+     	Três doenças também podem ser diagnosticadas:
+     
+      1. antracnose
+      2. mofo preto
+      3. oidio
+     
+          Para obter informações sobre os resultados de uma consulta, selecione a 
+     resposta encontrada e aperte a TECLA F1 - que exibirá textos explicativos 
+     referentes à conclusão.
+          Durante a consulta, algumas perguntas possuem motivos. Pressione o botão 
+     POR QUE (quando disponível) para vê-las.
+     
+          Sugestões e pedidos de informação são muito bem-vindos!
+
+Operador de maior precedência: disjunção
+Fator de confiança mínimo para aceitação de regra: 50
+
+SOBRE OS ARQUIVOS
+  Arquivo original: D:\edquel\sistemas de informação\material-IC\sinta32\SECAJU.BCM
+  Arquivo de ajuda: secaju.hlp
+--------------------------------------------------------------------------------
+
+VARIÁVEIS
+
+  besourinhos vermelhos
+    Tipo:
+      univalorada
+  bolor negro na face inferior das folhas
+    Tipo:
+      univalorada
+  brotações novas murchas
+    Tipo:
+      univalorada
+  castanha broqueada com amêndoa totalmente destruída
+    Tipo:
+      univalorada
+  cinza vegetal sobre as folhas
+    Tipo:
+      univalorada
+  diminuição da área foliar
+    Tipo:
+      univalorada
+  doença
+    Valores:
+      oidio
+      antracnose
+      mofo preto
+    Tipo:
+      multivalorada
+  espirais de ovos
+    Tipo:
+      univalorada
+  espuma sobre inflorescências ou maturis
+    Tipo:
+      univalorada
+  folhas
+    Valores:
+      Com coloração prateada
+      Deformadas
+      Com exsudação de resina (goma)
+      Perfuradas
+      Esfarelam facilmente quando amassadas
+    Tipo:
+      multivalorada
+  folhas do broto terminal repolhadas
+    Tipo:
+      univalorada
+  fumagina na face superior das folhas
+    Tipo:
+      univalorada
+  galerias nos ramos ou inflorescências
+    Tipo:
+      univalorada
+  goma nos ramos
+    Tipo:
+      univalorada
+  inflorescências
+    Valores:
+      Existem lesões necróticas (muito escuras)
+      Murchas ou secas
+    Tipo:
+      multivalorada
+  inflorescências cloróticas
+    Tipo:
+      univalorada
+  inseto com cinta avermelhada sob as folhas
+    Tipo:
+      univalorada
+  inseto mole amarelo ou verde
+    Tipo:
+      univalorada
+  lagarta cinza lisa com partes pretas e manchas brancas
+    Tipo:
+      univalorada
+  lagarta enrolada em folha
+    Tipo:
+      univalorada
+  lagarta grande verde - alaranjada
+    Tipo:
+      univalorada
+  lagarta pequena com pêlos longos e verdes
+    Tipo:
+      univalorada
+  lagarta verde com pêlos avermelhados e urticantes
+    Tipo:
+      univalorada
+  larvas marrom - claras e lentas
+    Tipo:
+      univalorada
+  manchas irregulares nas folhas
+    Tipo:
+      univalorada
+  maturis
+    Valores:
+      Necrosados (muito escuros)
+      Rachados
+      Mumificados
+      Deformados
+    Tipo:
+      multivalorada
+  mela nas inflorescências, folhas e maturis
+    Tipo:
+      univalorada
+  ocorrência de janeiro a abril
+    Tipo:
+      univalorada
+  orifícios laterais nos ramos ou inflorescências
+    Tipo:
+      univalorada
+  praga
+    Valores:
+      larva do broto terminal
+      besouro vermelho
+      lagarta das folhas
+      lagarta saia justa
+      eriofiídeo das flores
+      broca das pontas
+      cigarrinha
+      mosca branca
+      lagarta véu de noiva
+      lagarta verde
+      tripes
+      pulgão das inflorescências
+      traça das castanhas
+    Tipo:
+      multivalorada
+  queda das inflorescências
+    Tipo:
+      univalorada
+  secreção pulverulenta branca sob as folhas
+    Tipo:
+      univalorada
+  suspeita de doença
+    Valores:
+      oidio
+      antracnose
+    Tipo:
+      multivalorada
+  suspeita de praga
+    Valores:
+      pulgão das inflorescências
+      tripes
+      lagarta verde
+      lagarta véu de noiva
+      mosca branca
+      broca das pontas
+      eriofiídeo das flores
+      lagarta saia justa
+      lagarta da folhas
+      besouro vermelho
+    Tipo:
+      multivalorada
+  teias envolvendo inflorescências e brotações novas
+    Tipo:
+      univalorada
+  ácaro estreito ou longo nas inflorescências
+    Tipo:
+      univalorada
+
+OBJETIVOS
+
+  praga
+  suspeita de praga
+  doença
+  suspeita de doença
+
+REGRAS
+
+  Regra 1
+    SE castanha broqueada com amêndoa totalmente destruída = Sim
+    ENTÃO praga = traça das castanhas CNF 100%
+
+  Regra 2
+    SE galerias nos ramos ou inflorescências = Sim
+    ENTÃO praga = broca das pontas CNF 100%
+
+  Regra 3
+    SE inflorescências = Murchas ou secas
+    E  brotações novas murchas = Sim
+    E  orifícios laterais nos ramos ou inflorescências = Sim
+    ENTÃO praga = broca das pontas CNF 100%
+
+  Regra 4
+    SE inseto mole amarelo ou verde = Sim
+    ENTÃO praga = pulgão das inflorescências CNF 100%
+
+  Regra 5
+    SE ácaro estreito ou longo nas inflorescências = Sim
+    ENTÃO praga = eriofiídeo das flores CNF 100%
+
+  Regra 6
+    SE inseto com cinta avermelhada sob as folhas = Sim
+    ENTÃO praga = tripes CNF 100%
+
+  Regra 7
+    SE lagarta cinza lisa com partes pretas e manchas brancas = Sim
+    OU lagarta enrolada em folha = Sim
+    OU espirais de ovos = Sim
+    ENTÃO praga = lagarta saia justa CNF 100%
+
+  Regra 8
+    SE lagarta grande verde - alaranjada = Sim
+    ENTÃO praga = lagarta verde CNF 100%
+
+  Regra 9
+    SE lagarta verde com pêlos avermelhados e urticantes = Sim
+    ENTÃO praga = lagarta das folhas CNF 100%
+
+  Regra 10
+    SE lagarta pequena com pêlos longos e verdes = Sim
+    ENTÃO praga = lagarta véu de noiva CNF 100%
+
+  Regra 11
+    SE besourinhos vermelhos = Sim
+    OU larvas marrom - claras e lentas = Sim
+    ENTÃO praga = besouro vermelho CNF 100%
+
+  Regra 12
+    SE secreção pulverulenta branca sob as folhas = Sim
+    ENTÃO praga = mosca branca CNF 100%
+
+  Regra 13
+    SE folhas do broto terminal repolhadas = Sim
+    ENTÃO praga = larva do broto terminal CNF 100%
+
+  Regra 14
+    SE espuma sobre inflorescências ou maturis = Sim
+    ENTÃO praga = cigarrinha CNF 100%
+
+  Regra 15
+    SE praga <> broca das pontas
+    E  goma nos ramos = Sim
+    ENTÃO suspeita de praga = broca das pontas CNF 30%
+
+  Regra 16
+    SE praga <> broca das pontas
+    E  brotações novas murchas = Sim
+    ENTÃO suspeita de praga = broca das pontas CNF 40%
+
+  Regra 17
+    SE praga <> broca das pontas
+    E  inflorescências = Murchas ou secas
+    ENTÃO suspeita de praga = broca das pontas CNF 40%
+
+  Regra 18
+    SE praga <> pulgão das inflorescências
+    E  inflorescências = Murchas ou secas
+    E  maturis = Deformados
+    ENTÃO suspeita de praga = pulgão das inflorescências CNF 20%
+
+  Regra 19
+    SE praga <> pulgão das inflorescências
+    E  mela nas inflorescências, folhas e maturis = Sim
+    ENTÃO suspeita de praga = pulgão das inflorescências CNF 20%
+
+  Regra 20
+    SE praga <> eriofiídeo das flores
+    E  queda das inflorescências = Sim
+    ENTÃO suspeita de praga = eriofiídeo das flores CNF 50%
+
+  Regra 21
+    SE praga <> eriofiídeo das flores
+    E  inflorescências cloróticas = Sim
+    ENTÃO suspeita de praga = eriofiídeo das flores CNF 70%
+
+  Regra 22
+    SE praga <> tripes
+    E  folhas = Com coloração prateada
+    ENTÃO suspeita de praga = tripes CNF 45%
+
+  Regra 23
+    SE praga <> lagarta saia justa
+    E  praga <> lagarta das folhas
+    E  praga <> lagarta verde
+    E  praga <> lagarta véu de noiva
+    E  praga <> besouro vermelho
+    E  diminuição da área foliar = Sim
+    ENTÃO suspeita de praga = lagarta saia justa CNF 50%
+          suspeita de praga = lagarta da folhas CNF 50%
+          suspeita de praga = lagarta verde CNF 50%
+          suspeita de praga = lagarta véu de noiva CNF 50%
+          suspeita de praga = besouro vermelho CNF 50%
+
+  Regra 24
+    SE praga <> lagarta saia justa
+    E  teias envolvendo inflorescências e brotações novas = Sim
+    ENTÃO suspeita de praga = lagarta saia justa CNF 100%
+
+  Regra 25
+    SE praga <> besouro vermelho
+    E  folhas = Perfuradas
+    E  ocorrência de janeiro a abril = Sim
+    ENTÃO suspeita de praga = besouro vermelho CNF 50%
+
+  Regra 26
+    SE fumagina na face superior das folhas = Sim
+    ENTÃO suspeita de praga = mosca branca CNF 70%
+
+  Regra 27
+    SE inflorescências <> DESCONHECIDO
+    E  maturis = Rachados
+    OU maturis = Necrosados (muito escuros)
+    OU maturis = Mumificados
+    ENTÃO doença = antracnose CNF 100%
+
+  Regra 28
+    SE bolor negro na face inferior das folhas = Sim
+    ENTÃO doença = mofo preto CNF 100%
+
+  Regra 29
+    SE cinza vegetal sobre as folhas = Sim
+    ENTÃO doença = oidio CNF 100%
+
+  Regra 30
+    SE doença <> antracnose
+    E  folhas = Deformadas
+    OU folhas = Esfarelam facilmente quando amassadas
+    E  manchas irregulares nas folhas = Sim
+    ENTÃO suspeita de doença = antracnose CNF 75%
+
+  Regra 31
+    SE doença <> antracnose
+    E  folhas = Deformadas
+    OU folhas = Esfarelam facilmente quando amassadas
+    E  manchas irregulares nas folhas = Sim
+    E  folhas = Com exsudação de resina (goma)
+    ENTÃO suspeita de doença = antracnose CNF 85%
+
+  Regra 32
+    SE doença <> oidio
+    E  queda das inflorescências = Sim
+    ENTÃO suspeita de doença = oidio CNF 50%
+
+PERGUNTAS
+
+  Variável:besourinhos vermelhos
+     Pergunta:"Você observou a presença de besourinhos de cor vermelha?"
+  Variável:bolor negro na face inferior das folhas
+     Pergunta:"Você observou, na face inferior das folhas, colônias de fungos em forma de bolor negro e feltroso?"
+  Variável:brotações novas murchas
+     Pergunta:"As brotações novas encontram-se murchas ou secas?"
+  Variável:castanha broqueada com amêndoa totalmente destruída
+     Pergunta:"As castanhas estão broqueadas, com a amêndoa totalmente destruída?"
+  Variável:cinza vegetal sobre as folhas
+     Pergunta:"Você observou, sobre as folhas, a formação de um revestimento ralo, branco-acinzentado e pulverulento, aparentando um polvilhamento com cinza vegetal?"
+  Variável:diminuição da área foliar
+     Pergunta:"Você observou folhas total ou parcialmente comidas?"
+  Variável:espirais de ovos
+     Pergunta:"Você observou a presença de uma espiralzinha de ovos presa, por uma extremidade, aos ramos?"
+  Variável:espuma sobre inflorescências ou maturis
+     Pergunta:"Você observou a formação de uma espuma sobre as inflorescências, maturis (frutos novos) ou pendúculo?"
+  Variável:folhas
+     Pergunta:"Como estão as folhas dos cajueiros? Marque a(s) alternativa(s) que melhor caracteriza(m) as folhas afetadas."
+  Variável:folhas do broto terminal repolhadas
+     Pergunta:"As folhas do broto terminal estão repolhadas (retorcidas e enroladas umas sobre as outras)?"
+  Variável:fumagina na face superior das folhas
+     Pergunta:"Você observou, na face superior das folhas, a presença de fumagina, que são colônias de fungos de coloração negra e opaca?"
+  Variável:galerias nos ramos ou inflorescências
+     Pergunta:"Você chegou a ver galerias dentro dos ramos ou das inflorescências?"
+  Variável:goma nos ramos
+     Pergunta:"Você observou a presença de goma (resina) nos ramos?"
+  Variável:inflorescências
+     Pergunta:"Como se apresentam as inflorescências?"
+  Variável:inflorescências cloróticas
+     Pergunta:"As pétalas, as sépalas e o pendúculo floral apresentam-se cloróticos (amarelados)?"
+  Variável:inseto com cinta avermelhada sob as folhas
+     Pergunta:"Você observou, na face inferior das folhas, a presença de colônias de insetos pequenos, amarelados, com uma cinta avermelhada?"
+  Variável:inseto mole amarelo ou verde
+     Pergunta:"Você observou a presença de insetos pequenos, moles, de cor amarelo-claro ou verde-escuro, nas inflorescências, folhas (principalmente na face inferior) e maturis?"
+  Variável:lagarta cinza lisa com partes pretas e manchas brancas
+     Pergunta:"Você observou a presença de lagartas de tamanho médio (6 cm), coloração cinza, lisas (sem pelos), com a cabeça e as partes laterais do corpo pretas com manchas brancas?"
+  Variável:lagarta enrolada em folha
+     Pergunta:"Você observou a presença de lagartas enroladas em folhas (normalmente secas), de moso a lembrar um caruncho ou uma saia justa?"
+  Variável:lagarta grande verde - alaranjada
+     Pergunta:"Você observou lagartas de tamanho grande (10 cm), coloração variável (verde-alaranjada, amarela ou marrom), e pêlos não-urticantes?"
+  Variável:lagarta pequena com pêlos longos e verdes
+     Pergunta:"Você observou a presença de lagartas de tamanho pequeno (3 cm), coloração verde-clara, e pelos longos verdes?"
+  Variável:lagarta verde com pêlos avermelhados e urticantes
+     Pergunta:"Você observou a presença de lagartas de tamanho grande (8 cm), coloração verde e pêlos curtos, avermelhados e urticantes?"
+  Variável:larvas marrom - claras e lentas
+     Pergunta:"Você observou a presença de larvas de cor marrom-clara, movimentos lentos e tamanho em torno de 2 cm? Elas costumas descer para o chão, onde ficam enterradas sob a forma de pupa."
+  Variável:manchas irregulares nas folhas
+     Pergunta:"As folhas apresentam manchas irregulares de coloração avermelhada ou marrom-avermelhada?"
+  Variável:maturis
+     Pergunta:"Em que condição estão os maturis? Maturi é o caju novo, ou seja, a castanha verde, grande e mole, antes do desenvolvimento do pendúculo."
+  Variável:mela nas inflorescências, folhas e maturis
+     Pergunta:"Você observou a presença de mela nas inflorescências, folhas e maturis? A mela é uma substância excretada por inseto, e favorece o aparecimento de formigas e da fumagina."
+  Variável:ocorrência de janeiro a abril
+     Pergunta:"O ataque ao cajueiral deu-se entre janeiro e abril?"
+  Variável:orifícios laterais nos ramos ou inflorescências
+     Pergunta:"Você observou a presença de orifícios laterais nos ramos ou nas inflorescências?"
+  Variável:queda das inflorescências
+     Pergunta:"Você observou a queda das inflorescências?"
+  Variável:secreção pulverulenta branca sob as folhas
+     Pergunta:"Observando a face inferior das folhas, você verifica a presença de uma secreção pulverulenta branca ou de insetos parecidos com uma mosca pequena, de cor branca?"
+  Variável:teias envolvendo inflorescências e brotações novas
+     Pergunta:"As inflorescências e brotações novas estão total ou parcialmente destruídas e envolvidas (cobertas) por teias?"
+  Variável:ácaro estreito ou longo nas inflorescências
+     Pergunta:"Você observou, nas inflorescências, colônias de ácaros de corpo estreito e longo (eles só são visualizados com o auxílio de uma lupa)?"
+
+--------------------------------------------------------------------------------
+Gerado com o Expert SINTA versão 1.1b
+(c) 1997 - Universidade Federal do Ceará
+           Laboratório de Inteligência Artificial
+           LIA/UFC
+--------------------------------------------------------------------------------

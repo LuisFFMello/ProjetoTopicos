@@ -1,0 +1,503 @@
+--------------------------------------------------------------------------------
+SOBRE O SISTEMA ESPECIALISTA
+  -- Nome:    Service Desk
+  -- Autores: Edquel B Prado Farias, Patricia Moraes Moreira
+  -- Resumo:
+     Sistema de Apoio a Decisão para analistas
+      e tecnicos em Service Desk dentro do ambiente de TI
+
+Operador de maior precedência: conjunção
+Fator de confiança mínimo para aceitação de regra: 50
+As premissas devem ser avaliadas por completo.
+
+SOBRE OS ARQUIVOS
+  Arquivo original: D:\EDQUEL\SISTEMAS DE INFORMAÇÃO\PROJETO TCC\PROJETO TCC\EXVCLSRC\SINTA32\SERV_DESC.BCM
+  O sistema não possui recursos de ajuda.
+--------------------------------------------------------------------------------
+
+VARIÁVEIS
+
+  'Reinstalar drivers de impressão
+    Tipo:
+      univalorada
+  3º nivel Substituição temporaria de monitor e manutenção externa
+    Tipo:
+      univalorada
+  Alocado  equipamento
+    Tipo:
+      univalorada
+  Alocação compartilhamento e configuração de impressora
+    Tipo:
+      univalorada
+  Alocação configuração de Impressora
+    Tipo:
+      univalorada
+  Alocação configuração e compartilhamento de Impressora
+    Tipo:
+      univalorada
+  Alocação de equipamento movel para reunião
+    Tipo:
+      univalorada
+  Alocação de equipamento SWITCH
+    Tipo:
+      univalorada
+  Alocação de No Break
+    Tipo:
+      univalorada
+  Alocação e  configuração de impressora
+    Tipo:
+      univalorada
+  Alocação e substituição de Monitor de video
+    Tipo:
+      univalorada
+  Alocação Leitor de código de Barras
+    Tipo:
+      univalorada
+  Alocação Monitor de Video
+    Tipo:
+      univalorada
+  Cabo de comunicação com mau contato
+    Tipo:
+      univalorada
+  Cabo de comunicação desconectado
+    Tipo:
+      univalorada
+  Cabo de energia mal conectado
+    Tipo:
+      univalorada
+  Cabo de rede desconectado
+    Tipo:
+      univalorada
+  Cabo de video mal conectado
+    Tipo:
+      univalorada
+  Catraca parou de funcionar
+    Tipo:
+      univalorada
+  Compartilhamento de Impressora
+    Tipo:
+      univalorada
+  CABO DESCONECTADO
+    Tipo:
+      univalorada
+  cabo rompido necessario substituição
+    Tipo:
+      univalorada
+  compartilhamento e configuração de impressora
+    Tipo:
+      univalorada
+  Conetar cabo(RJ 45) e testar conectividade de rede
+    Tipo:
+      univalorada
+  comunicado manutenção
+    Tipo:
+      univalorada
+  Configurada corretamente na chave seletora de voltagem
+    Tipo:
+      univalorada
+  Configurar e reiniciar
+    Tipo:
+      univalorada
+  Corrigido em Propriedades e configuração
+    Tipo:
+      univalorada
+  Curto circuito no No Break
+    Tipo:
+      univalorada
+  contactar Manutenção
+    Tipo:
+      univalorada
+  DESLIGADO E LIGADO IMPRESSORA
+    Tipo:
+      univalorada
+  Desobstruir cancelar impressões pendente e reiniciar o computador e a impressora
+    Tipo:
+      univalorada
+  Desobstrução da impressora
+    Tipo:
+      univalorada
+  Equipamento queimado
+    Tipo:
+      univalorada
+  Equipamento queimado (hub de 8 portas )
+    Tipo:
+      univalorada
+  Erro de configuração a esclarecer
+    Tipo:
+      univalorada
+  Falha de hardware Substituir monitor
+    Tipo:
+      univalorada
+  Falha em dispositivo PCI de rede
+    Tipo:
+      univalorada
+  Falha em ponto de rede cabo quebrado
+    Tipo:
+      univalorada
+  Falha em ponto de rede desconexão de cabo
+    Tipo:
+      univalorada
+  Falha hardware a esclarecer
+    Tipo:
+      univalorada
+  Falha hardware alimentação de energia
+    Tipo:
+      univalorada
+  Falha hardware alimentação de energia sem força na tomada
+    Tipo:
+      univalorada
+  Falha Impressora desconfigurada
+    Tipo:
+      univalorada
+  Falha impressora lenta
+    Tipo:
+      univalorada
+  Falha Impressora com atolamento de papel
+    Tipo:
+      univalorada
+  Falha hardware cabeça de impressão
+    Tipo:
+      univalorada
+  Falha impressora não funciona
+    Tipo:
+      univalorada
+  Falha impressora travando
+    Tipo:
+      univalorada
+  Falha na impressão
+    Tipo:
+      univalorada
+  Hardwares periféricos diversos
+    Tipo:
+      univalorada
+  IMPRIMINDO PÁGINA TESTE
+    Tipo:
+      univalorada
+  INSTALADO CHAVE COMUTADORA.
+    Tipo:
+      univalorada
+  Instalado ponto de rede
+    Tipo:
+      univalorada
+  INSTALAR CHAVE COMUTADORA.
+    Tipo:
+      univalorada
+  Instalação de equipamento de rede switch
+    Tipo:
+      univalorada
+  insumo acabou (cartucho)
+    Tipo:
+      univalorada
+  Impressora
+    Valores:
+      Térmica 
+       LaserJet 
+      Matricial
+      DeskJet
+    Tipo:
+      multivalorada
+  Impressora desconfigurada
+    Tipo:
+      univalorada
+  Impressora em curto
+    Tipo:
+      univalorada
+  Impressora em pausa
+    Tipo:
+      univalorada
+  Impressora queimada
+    Tipo:
+      univalorada
+  insumo acabou (fita)
+    Tipo:
+      univalorada
+  insumo acabou (tonner)
+    Tipo:
+      univalorada
+  Insumo acabou(ribon)
+    Tipo:
+      univalorada
+  Interruptor com problemas
+    Tipo:
+      univalorada
+  Falha de hardware Oscilando as cores
+    Tipo:
+      univalorada
+  Falha de hardware nâo mantem configuração
+    Tipo:
+      univalorada
+  Erro de configuração CPU travada
+    Tipo:
+      univalorada
+  Erro de configuração Reconfigurar  por SO
+    Tipo:
+      univalorada
+  Erro de configuração sem imagem
+    Tipo:
+      univalorada
+  Excesso de documento no spool
+    Tipo:
+      univalorada
+  Falha  hardware Fusor
+    Tipo:
+      univalorada
+  Falha atolamento de papel
+    Tipo:
+      univalorada
+  Falha configuração voltagem errada
+    Tipo:
+      univalorada
+  Falha de hardware componente queimado
+    Tipo:
+      univalorada
+  Ligar Data Show
+    Tipo:
+      univalorada
+  MAQUINA DE SENHA NÃO FUNCIONA.
+    Tipo:
+      univalorada
+  Mau funcionamento monitor apagou
+    Tipo:
+      univalorada
+  Monitor apresenta oscilação de cor
+    Tipo:
+      univalorada
+  Limpeza do spool
+    Tipo:
+      univalorada
+  luz de dados sem impressão em bufer
+    Tipo:
+      univalorada
+  Mal contato
+    Tipo:
+      univalorada
+  Monitor apresenta oscilação de imagem
+    Tipo:
+      univalorada
+  Monitor de Vídeo
+    Tipo:
+      univalorada
+  Monitor desconfigurado
+    Tipo:
+      univalorada
+  Monitor não liga
+    Tipo:
+      univalorada
+  Monitor sem imagem
+    Tipo:
+      univalorada
+  Monitor sem sinal de  imagem e led piscando
+    Tipo:
+      univalorada
+  Necessidade do setor
+    Tipo:
+      univalorada
+  Necessidade de upgrade de equipamento
+    Tipo:
+      univalorada
+  Mudança ou manutenção de impressora
+    Tipo:
+      univalorada
+  Necessario para poteção de dados e equipamentos
+    Tipo:
+      univalorada
+  necessario preparar equipamento para uso
+    Tipo:
+      univalorada
+  Necessidade funcional
+    Tipo:
+      univalorada
+  Necessário Ponto de rede
+    Tipo:
+      univalorada
+  Necessário expansão de rede logica
+    Tipo:
+      univalorada
+  No Break
+    Tipo:
+      univalorada
+  Não carrega e nem mantem carga
+    Tipo:
+      univalorada
+  Não chega sinal de rede conectar via local port(usb ou serial)
+    Tipo:
+      univalorada
+  Não esta carregando
+    Tipo:
+      univalorada
+  Não esta imprimindo
+    Tipo:
+      univalorada
+  Não liga
+    Tipo:
+      univalorada
+  Não recebe força da rede eletrica
+    Tipo:
+      univalorada
+  Perda de conexão com a rede por queda de energia
+    Tipo:
+      univalorada
+  Plugue da tomada do cabo de rede esta quebrado
+    Tipo:
+      univalorada
+  Problemas com driver de impressora
+    Tipo:
+      univalorada
+  Quando volta a força continua usando a bateria
+    Tipo:
+      univalorada
+  REDE LOGICA Novo ponto de rede
+    Tipo:
+      univalorada
+  Rede Lógica
+    Tipo:
+      univalorada
+  Rede logica ponto sem sinal
+    Tipo:
+      univalorada
+  queda de disjuntor
+    Tipo:
+      univalorada
+  Reiniciado o micro
+    Tipo:
+      univalorada
+  reiniciar  equipamento
+    Tipo:
+      univalorada
+  Retirar do No break e colocar em uma tomada normal.
+    Tipo:
+      univalorada
+  RJ do cabo que vai no PC quebrado.
+    Tipo:
+      univalorada
+  Selecionado menu de desmagnetizador
+    Tipo:
+      univalorada
+  Serviço uso de data show
+    Tipo:
+      univalorada
+  Sinal sonoro e luzes piscando
+    Tipo:
+      univalorada
+  Solicitação de troca de insumo (cartucho)
+    Tipo:
+      univalorada
+  Solicitação de troca de insumo (Tonner)
+    Tipo:
+      univalorada
+  Solicitação de troca de insumo (fita)
+    Tipo:
+      univalorada
+  Solicitação de troca de insumo (ribon)
+    Tipo:
+      univalorada
+  Substituido e encaminhado a doação ou demex
+    Tipo:
+      univalorada
+  retornou da manutenção
+    Tipo:
+      univalorada
+  Substituido insumo de impressão
+    Tipo:
+      univalorada
+  Substituição de monitor
+    Tipo:
+      univalorada
+  Substituir cabo ou refazer glimpagem
+    Tipo:
+      univalorada
+  Substituição de equipamento SWITCH
+    Tipo:
+      univalorada
+  substituir insumo de impressão(todos)
+    Tipo:
+      univalorada
+  substituiçao temporaria de equipamento manutenção externa 3ºnivel
+    Tipo:
+      univalorada
+  substituir insumo de impressão(todos)
+    Tipo:
+      univalorada
+  Substituição de monitor de video
+    Tipo:
+      univalorada
+  Tirado pausa em propriedades
+    Tipo:
+      univalorada
+  Troca de ambos RJ
+    Tipo:
+      univalorada
+  Trocado fusivel de 3A
+    Tipo:
+      univalorada
+  Trocado interruptor
+    Tipo:
+      univalorada
+  Trocar RJ. 45 (glimpagem)
+    Tipo:
+      univalorada
+  Verficar se esta com voltagem correta
+    Tipo:
+      univalorada
+  Verificadas ferramentas administrativas . Criado ID. Instalada PCI de rede, acesso permitido
+    Tipo:
+      univalorada
+  Verificar e conectar todos os cabo(energia e comunicação)
+    Tipo:
+      univalorada
+  verificar e conectar cabos de alimentação
+    Tipo:
+      univalorada
+  Verificar e conectar todos os cabos energia e comunicação
+    Tipo:
+      univalorada
+  x
+    Tipo:
+      univalorada
+
+OBJETIVOS
+
+  substituir insumo de impressão(todos)
+  Alocação e  configuração de impressora
+
+REGRAS
+
+  Regra 1
+    SE Impressora =  LaserJet 
+    OU Impressora = DeskJet
+    OU Impressora = Matricial
+    OU Impressora = Térmica 
+    E  Falha atolamento de papel = Sim
+    E  Falha  hardware Fusor = Sim
+    ENTÃO substituir insumo de impressão(todos) = Sim CNF 90%
+          substituiçao temporaria de equipamento manutenção externa 3ºnivel = Sim CNF 80%
+
+  Regra 2
+    SE Impressora =  LaserJet 
+    OU Impressora = DeskJet
+    OU Impressora = Matricial
+    OU Impressora = Térmica 
+    E  Alocação configuração de Impressora = Sim
+    E  Necessidade funcional = Sim
+    ENTÃO Alocação e  configuração de impressora = Sim CNF 90%
+
+PERGUNTAS
+
+  Variável:Alocação configuração de Impressora
+     Pergunta:"Instalar impressora em outro local"
+     Motivo:"foi solicitado via memorando pela chefia
+  Variável:Impressora
+     Pergunta:"Qual o tipo de impressora"
+  Variável:Falha  hardware Fusor
+     Pergunta:"É falha de hardware fusor"
+  Variável:Falha atolamento de papel
+     Pergunta:"Apresenta atolamento de papel"
+  Variável:Necessidade funcional
+     Pergunta:"É necessaário a transferência da impressora de local"
+
+--------------------------------------------------------------------------------
+Gerado com o Expert SINTA versão 1.1b
+(c) 1997 - Universidade Federal do Ceará
+           Laboratório de Inteligência Artificial
+           LIA/UFC
+--------------------------------------------------------------------------------

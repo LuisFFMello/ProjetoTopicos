@@ -1,0 +1,300 @@
+--------------------------------------------------------------------------------
+SOBRE O SISTEMA ESPECIALISTA
+  -- Nome:    SEM NOME
+  -- Autores: 
+
+Operador de maior precedência: conjunção
+Fator de confiança mínimo para aceitação de regra: 50
+
+SOBRE OS ARQUIVOS
+  Arquivo original: C:\Users\profm\Downloads\indicadorDeCompraDeComputadores.bcm
+  O sistema não possui recursos de ajuda.
+--------------------------------------------------------------------------------
+
+VARIÁVEIS
+
+  ARMAZENAMENTO
+    Valores:
+      Nenhum
+      1000 GB de HD
+      1000 GB de SSD
+      500 GB de HD
+      500 GB de SSD
+    Tipo:
+      multivalorada
+  MEMORIA RAM
+    Valores:
+      Nenhum
+      16 GB
+      4 GB
+      8 GB
+    Tipo:
+      multivalorada
+  PLACA DE VIDEO
+    Valores:
+      NÃO
+      Nenhum
+      SIM
+    Tipo:
+      multivalorada
+  PROCESSADOR
+    Valores:
+      Nenhum
+      Six-Core
+      Dual-Core
+      Octa-Core
+      Quad-Core
+    Tipo:
+      multivalorada
+  TEMPO_UTILIZACAO
+    Valores:
+      0 - 4 HORAS 
+      4 HORAS ++
+    Tipo:
+      multivalorada
+  TIPO LAZER
+    Valores:
+      NAVEGAR NA INTERNET
+      JOGAR
+    Tipo:
+      multivalorada
+  UTILIZA LAZER
+    Valores:
+      SIM
+      NÃO
+    Tipo:
+      multivalorada
+  UTILIZA TRABALHO
+    Valores:
+      SIM
+      NÃO
+    Tipo:
+      multivalorada
+
+OBJETIVOS
+
+  PROCESSADOR
+  MEMORIA RAM
+  PLACA DE VIDEO
+  ARMAZENAMENTO
+
+REGRAS
+
+  Regra 1
+    SE TEMPO_UTILIZACAO = 0 - 4 HORAS 
+    ENTÃO PROCESSADOR = Dual-Core CNF 60%
+          PROCESSADOR = Quad-Core CNF 40%
+          MEMORIA RAM = 4 GB CNF 20%
+          MEMORIA RAM = 8 GB CNF 80%
+          ARMAZENAMENTO = 500 GB de HD CNF 40%
+          ARMAZENAMENTO = 500 GB de SSD CNF 20%
+          ARMAZENAMENTO = 1000 GB de HD CNF 20%
+          ARMAZENAMENTO = 1000 GB de SSD CNF 20%
+          PLACA DE VIDEO = SIM CNF 50%
+          PLACA DE VIDEO = NÃO CNF 50%
+
+  Regra 2
+    SE TEMPO_UTILIZACAO = 0 - 4 HORAS 
+    E  UTILIZA TRABALHO = NÃO
+    ENTÃO PROCESSADOR = Dual-Core CNF 50%
+          PROCESSADOR = Quad-Core CNF 50%
+          MEMORIA RAM = 4 GB CNF 50%
+          MEMORIA RAM = 8 GB CNF 50%
+          ARMAZENAMENTO = 500 GB de HD CNF 50%
+          ARMAZENAMENTO = 500 GB de SSD CNF 50%
+          PLACA DE VIDEO = SIM CNF 50%
+          PLACA DE VIDEO = NÃO CNF 50%
+
+  Regra 3
+    SE TEMPO_UTILIZACAO = 0 - 4 HORAS 
+    E  UTILIZA TRABALHO = SIM
+    ENTÃO PROCESSADOR = Dual-Core CNF 66%
+          PROCESSADOR = Quad-Core CNF 34%
+          MEMORIA RAM = 8 GB CNF 100%
+          ARMAZENAMENTO = 500 GB de HD CNF 33%
+          ARMAZENAMENTO = 1000 GB de HD CNF 33%
+          ARMAZENAMENTO = 1000 GB de SSD CNF 34%
+          PLACA DE VIDEO = SIM CNF 50%
+          PLACA DE VIDEO = NÃO CNF 50%
+
+  Regra 4
+    SE TEMPO_UTILIZACAO = 0 - 4 HORAS 
+    E  UTILIZA TRABALHO = NÃO
+    E  UTILIZA LAZER = NÃO
+    ENTÃO PROCESSADOR = Nenhum CNF 100%
+          MEMORIA RAM = Nenhum CNF 100%
+          ARMAZENAMENTO = Nenhum CNF 100%
+          PLACA DE VIDEO = Nenhum CNF 100%
+
+  Regra 5
+    SE TEMPO_UTILIZACAO = 0 - 4 HORAS 
+    E  UTILIZA TRABALHO = SIM
+    E  UTILIZA LAZER = NÃO
+    ENTÃO PROCESSADOR = Dual-Core CNF 100%
+          MEMORIA RAM = 8 GB CNF 100%
+          ARMAZENAMENTO = 500 GB de HD CNF 100%
+          PLACA DE VIDEO = NÃO CNF 100%
+
+  Regra 6
+    SE TEMPO_UTILIZACAO = 0 - 4 HORAS 
+    E  UTILIZA TRABALHO = NÃO
+    E  UTILIZA LAZER = SIM
+    E  TIPO LAZER = NAVEGAR NA INTERNET
+    ENTÃO PROCESSADOR = Dual-Core CNF 100%
+          MEMORIA RAM = 4 GB CNF 100%
+          ARMAZENAMENTO = 500 GB de HD CNF 100%
+          PLACA DE VIDEO = NÃO CNF 100%
+
+  Regra 7
+    SE TEMPO_UTILIZACAO = 0 - 4 HORAS 
+    E  UTILIZA TRABALHO = SIM
+    E  UTILIZA LAZER = SIM
+    E  TIPO LAZER = JOGAR
+    ENTÃO PROCESSADOR = Quad-Core CNF 100%
+          MEMORIA RAM = 8 GB CNF 100%
+          ARMAZENAMENTO = 500 GB de SSD CNF 100%
+          PLACA DE VIDEO = SIM CNF 100%
+
+  Regra 8
+    SE TEMPO_UTILIZACAO = 0 - 4 HORAS 
+    E  UTILIZA TRABALHO = SIM
+    E  UTILIZA LAZER = SIM
+    E  TIPO LAZER = NAVEGAR NA INTERNET
+    ENTÃO PROCESSADOR = Dual-Core CNF 100%
+          MEMORIA RAM = 8 GB CNF 100%
+          ARMAZENAMENTO = 1000 GB de HD CNF 100%
+          PLACA DE VIDEO = NÃO CNF 100%
+
+  Regra 9
+    SE TEMPO_UTILIZACAO = 0 - 4 HORAS 
+    E  UTILIZA TRABALHO = SIM
+    E  UTILIZA LAZER = SIM
+    E  TIPO LAZER = JOGAR
+    ENTÃO PROCESSADOR = Quad-Core CNF 100%
+          MEMORIA RAM = 8 GB CNF 100%
+          ARMAZENAMENTO = 1000 GB de SSD CNF 100%
+          PLACA DE VIDEO = SIM CNF 100%
+
+  Regra 10
+    SE TEMPO_UTILIZACAO = 4 HORAS ++
+    ENTÃO PROCESSADOR = Quad-Core CNF 40%
+          PROCESSADOR = Six-Core CNF 40%
+          PROCESSADOR = Octa-Core CNF 20%
+          MEMORIA RAM = 4 GB CNF 20%
+          MEMORIA RAM = 8 GB CNF 60%
+          MEMORIA RAM = 16 GB CNF 20%
+          ARMAZENAMENTO = 500 GB de HD CNF 20%
+          ARMAZENAMENTO = 1000 GB de HD CNF 40%
+          ARMAZENAMENTO = 500 GB de SSD CNF 20%
+          ARMAZENAMENTO = 1000 GB de SSD CNF 20%
+          PLACA DE VIDEO = SIM CNF 40%
+          PLACA DE VIDEO = NÃO CNF 60%
+
+  Regra 11
+    SE TEMPO_UTILIZACAO = 4 HORAS ++
+    E  UTILIZA TRABALHO = NÃO
+    ENTÃO PROCESSADOR = Quad-Core CNF 50%
+          PROCESSADOR = Six-Core CNF 50%
+          MEMORIA RAM = 4 GB CNF 50%
+          MEMORIA RAM = 8 GB CNF 50%
+          ARMAZENAMENTO = 500 GB de HD CNF 50%
+          ARMAZENAMENTO = 1000 GB de SSD CNF 50%
+          PLACA DE VIDEO = SIM CNF 50%
+          PLACA DE VIDEO = NÃO CNF 50%
+
+  Regra 12
+    SE TEMPO_UTILIZACAO = 4 HORAS ++
+    E  UTILIZA TRABALHO = SIM
+    ENTÃO PROCESSADOR = Quad-Core CNF 33%
+          PROCESSADOR = Six-Core CNF 33%
+          PROCESSADOR = Octa-Core CNF 34%
+          MEMORIA RAM = 8 GB CNF 66%
+          MEMORIA RAM = 16 GB CNF 34%
+          ARMAZENAMENTO = 1000 GB de HD CNF 33%
+          ARMAZENAMENTO = 500 GB de SSD CNF 33%
+          ARMAZENAMENTO = 1000 GB de SSD CNF 34%
+          PLACA DE VIDEO = SIM CNF 34%
+          PLACA DE VIDEO = NÃO CNF 66%
+
+  Regra 13
+    SE TEMPO_UTILIZACAO = 4 HORAS ++
+    E  UTILIZA TRABALHO = NÃO
+    E  UTILIZA LAZER = NÃO
+    ENTÃO PROCESSADOR = Nenhum CNF 100%
+          MEMORIA RAM = Nenhum CNF 100%
+          ARMAZENAMENTO = Nenhum CNF 100%
+          PLACA DE VIDEO = NÃO CNF 100%
+
+  Regra 14
+    SE TEMPO_UTILIZACAO = 4 HORAS ++
+    E  UTILIZA TRABALHO = SIM
+    E  UTILIZA LAZER = NÃO
+    ENTÃO PROCESSADOR = Quad-Core CNF 100%
+          MEMORIA RAM = 8 GB CNF 100%
+          ARMAZENAMENTO = 1000 GB de HD CNF 100%
+          PLACA DE VIDEO = NÃO CNF 100%
+
+  Regra 15
+    SE TEMPO_UTILIZACAO = 4 HORAS ++
+    E  UTILIZA TRABALHO = NÃO
+    E  UTILIZA LAZER = SIM
+    E  TIPO LAZER = NAVEGAR NA INTERNET
+    ENTÃO PROCESSADOR = Quad-Core CNF 100%
+          MEMORIA RAM = 4 GB CNF 100%
+          ARMAZENAMENTO = 500 GB de HD CNF 100%
+          PLACA DE VIDEO = NÃO CNF 100%
+
+  Regra 16
+    SE TEMPO_UTILIZACAO = 4 HORAS ++
+    E  UTILIZA TRABALHO = NÃO
+    E  UTILIZA LAZER = SIM
+    E  TIPO LAZER = JOGAR
+    ENTÃO PROCESSADOR = Six-Core CNF 100%
+          MEMORIA RAM = 8 GB CNF 100%
+          ARMAZENAMENTO = 1000 GB de HD CNF 100%
+          PLACA DE VIDEO = SIM CNF 100%
+
+  Regra 17
+    SE TEMPO_UTILIZACAO = 4 HORAS ++
+    E  UTILIZA TRABALHO = SIM
+    E  UTILIZA LAZER = SIM
+    E  TIPO LAZER = NAVEGAR NA INTERNET
+    ENTÃO PROCESSADOR = Six-Core CNF 100%
+          MEMORIA RAM = 8 GB CNF 100%
+          ARMAZENAMENTO = 500 GB de SSD CNF 100%
+          PLACA DE VIDEO = NÃO CNF 100%
+
+  Regra 18
+    SE TEMPO_UTILIZACAO = 4 HORAS ++
+    E  UTILIZA TRABALHO = SIM
+    E  UTILIZA LAZER = SIM
+    E  TIPO LAZER = JOGAR
+    ENTÃO PROCESSADOR = Octa-Core CNF 100%
+          MEMORIA RAM = 16 GB CNF 100%
+          ARMAZENAMENTO = 1000 GB de SSD CNF 100%
+          PLACA DE VIDEO = SIM CNF 100%
+
+PERGUNTAS
+
+  Variável:TEMPO_UTILIZACAO
+     Pergunta:"Quanto tempo você pretende utilizar o computador por dia?"
+     Motivo:"Saber a média de utilização do usuário
+  Variável:TIPO LAZER
+     Pergunta:"Que tipo de lazer você faz uso?"
+     Motivo:"Saber o tipo de lazer é importante para sabermos se será necessária mais capacidade gráfica, 
+            "ou maior capacidade em multi-tarefas, ou até ambas as opções
+  Variável:UTILIZA LAZER
+     Pergunta:"Você utiliza o computador para lazer?"
+     Motivo:"Saber se é utilizado para lazer é importante para determinarmos se precisará de algum periférico 
+            "específico para a atividade de lazer
+  Variável:UTILIZA TRABALHO
+     Pergunta:"Você utiliza o computador para trabalhar?"
+     Motivo:"Saber se precisará de um computador apto para trabalho, com capacidade para mutil-tarefas e 
+            "se suportará manter todas as aplicações rodando
+
+--------------------------------------------------------------------------------
+Gerado com o Expert SINTA versão 1.1b
+(c) 1997 - Universidade Federal do Ceará
+           Laboratório de Inteligência Artificial
+           LIA/UFC
+--------------------------------------------------------------------------------

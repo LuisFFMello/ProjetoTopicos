@@ -1,0 +1,106 @@
+--------------------------------------------------------------------------------
+SOBRE O SISTEMA ESPECIALISTA
+  -- Nome:    SEM NOME
+  -- Autores: 
+
+Operador de maior precedência: conjunção
+Fator de confiança mínimo para aceitação de regra: 50
+
+SOBRE OS ARQUIVOS
+  Arquivo original: C:\Users\edquelfarias\Google Drive\000 Sistemas Especialistas\0 aplicativos SE\00 SINTA\nova base rede logica  em implementação.BCM
+  O sistema não possui recursos de ajuda.
+--------------------------------------------------------------------------------
+
+VARIÁVEIS
+
+  Diagnóstico Provavel  Usuario Não acessa a rede nem faz login
+    Valores:
+      Perda de conexão com a rede por falha no switch (cabo de força desconectado)
+      Perda de conexão com a rede por queda de energia
+      Cabo de rede esta quebrado
+      Perda da Conexão com a rede por queda de Dominio (servidor de rede inoperante)
+      Perda de conexão com a rede por falha no switch (equipamento queimado)
+      Plugue (rj45) do cabo de rede esta  quebrado
+      Plugue da tomada do cabo de rede esta desconectado
+    Tipo:
+      multivalorada
+  Motivo da solicitação
+    Valores:
+      Catraca parou de funcionar
+      Não liga equipamento (no break )
+      Queda de força
+      Nececidade de expansão de rede
+      Alocação Leitor de codigo de Barras
+      Curto circuito no No Break
+      Nao liga equipamento (switch)
+      Sem energia na tomada
+       Usuario Não acessa a rede nem faz login
+      Rede logica ponto sem sinal 
+    Tipo:
+      multivalorada
+  Solução Proposta para falha de rede
+    Valores:
+      Trocar  ambos RJ
+      Instalar nobreak
+      Instalar novo ponto de rede
+      Comunicar a manutenção
+      verificar e conectar cabos de alimentação
+      verifivar e conectar cabos de rede(azul)
+      verificar e trocar cabos de rede(azul)
+      Instalar switch
+      Substituir switch e encaminhar o antigo para demex
+      Reiniciar e verificar pq o servidor caiu  e reniciar todos os micros
+    Tipo:
+      multivalorada
+
+OBJETIVOS
+
+  Solução Proposta para falha de rede
+
+REGRAS
+
+  Regra 1
+    SE Motivo da solicitação =  Usuario Não acessa a rede nem faz login
+    E  Diagnóstico Provavel  Usuario Não acessa a rede nem faz login = Plugue da tomada do cabo de rede esta desconectado
+    ENTÃO Solução Proposta para falha de rede = verifivar e conectar cabos de rede(azul) CNF 100%
+
+  Regra 2
+    SE Motivo da solicitação =  Usuario Não acessa a rede nem faz login
+    E  Diagnóstico Provavel  Usuario Não acessa a rede nem faz login = Plugue (rj45) do cabo de rede esta  quebrado
+    ENTÃO Solução Proposta para falha de rede = Trocar  ambos RJ CNF 100%
+
+  Regra 3
+    SE Motivo da solicitação =  Usuario Não acessa a rede nem faz login
+    E  Diagnóstico Provavel  Usuario Não acessa a rede nem faz login = Cabo de rede esta quebrado
+    ENTÃO Solução Proposta para falha de rede = verificar e trocar cabos de rede(azul) CNF 100%
+
+  Regra 4
+    SE Motivo da solicitação =  Usuario Não acessa a rede nem faz login
+    E  Diagnóstico Provavel  Usuario Não acessa a rede nem faz login = Perda de conexão com a rede por queda de energia
+    ENTÃO Solução Proposta para falha de rede = Instalar nobreak CNF 100%
+          Solução Proposta para falha de rede = Comunicar a manutenção CNF 100%
+
+  Regra 5
+    SE Motivo da solicitação =  Usuario Não acessa a rede nem faz login
+    E  Diagnóstico Provavel  Usuario Não acessa a rede nem faz login = Perda de conexão com a rede por falha no switch (equipamento queimado)
+    ENTÃO Solução Proposta para falha de rede = Substituir switch e encaminhar o antigo para demex CNF 100%
+
+  Regra 6
+    SE Motivo da solicitação =  Usuario Não acessa a rede nem faz login
+    E  Diagnóstico Provavel  Usuario Não acessa a rede nem faz login = Perda de conexão com a rede por falha no switch (cabo de força desconectado)
+    ENTÃO Solução Proposta para falha de rede = verificar e conectar cabos de alimentação CNF 100%
+          Solução Proposta para falha de rede = verifivar e conectar cabos de rede(azul) CNF 100%
+
+  Regra 7
+    SE Motivo da solicitação =  Usuario Não acessa a rede nem faz login
+    E  Diagnóstico Provavel  Usuario Não acessa a rede nem faz login = Perda da Conexão com a rede por queda de Dominio (servidor de rede inoperante)
+    ENTÃO Solução Proposta para falha de rede = verificar e conectar cabos de alimentação CNF 100%
+          Solução Proposta para falha de rede = verifivar e conectar cabos de rede(azul) CNF 100%
+          Solução Proposta para falha de rede = Reiniciar e verificar pq o servidor caiu  e reniciar todos os micros CNF 100%
+
+--------------------------------------------------------------------------------
+Gerado com o Expert SINTA versão 1.1b
+(c) 1997 - Universidade Federal do Ceará
+           Laboratório de Inteligência Artificial
+           LIA/UFC
+--------------------------------------------------------------------------------

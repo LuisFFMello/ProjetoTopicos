@@ -1,0 +1,926 @@
+--------------------------------------------------------------------------------
+SOBRE O SISTEMA ESPECIALISTA
+  -- Nome:    SiClaVe - Sistema de Classificação de Versão
+  -- Autores: Dacyr Gatto, Renato Sassi
+  -- Resumo:
+     Sistema Especialista, que simula o raciocínio humano na resolução de problemas aplicado para apoiar na classificação da criticidade da versão
+
+Operador de maior precedência: conjunção
+Fator de confiança mínimo para aceitação de regra: 50
+
+SOBRE OS ARQUIVOS
+  Arquivo original: C:\Users\edquel\Downloads\BooStudioLLC.8ZipLite_b6e429xa66pga!App\Extraído\sinta32 dacyr\sinta32\GLV2.bcm
+  O sistema não possui recursos de ajuda.
+--------------------------------------------------------------------------------
+
+VARIÁVEIS
+
+  1_Número de Bases PG5 Atualizadas
+    Valores:
+      2 até 23
+      24 ou Mais
+      1
+    Tipo:
+      univalorada
+  1_Número de Objetos Extras
+    Valores:
+      2 até 4
+      5 ou Mais
+      1
+    Tipo:
+      univalorada
+  1_Número de Objetos IND Server
+    Valores:
+      6 ou Mais
+      1 até 3
+      4 ou 5
+    Tipo:
+      univalorada
+  1_Número de Objetos NET Server
+    Valores:
+      4 ou 5
+      6 ou Mais
+      1 até 3
+    Tipo:
+      univalorada
+  1_Número de Objetos PG5 Server
+    Valores:
+      6 ou Mais
+      1 até 3
+      4 ou 5
+    Tipo:
+      univalorada
+  1_Número de Scripts EST
+    Valores:
+      2 até 10
+      11 ou Mais
+      1
+    Tipo:
+      univalorada
+  1_Número de Scripts IND
+    Valores:
+      11 ou Mais
+      1 até 5
+      6 até 10
+    Tipo:
+      univalorada
+  1_Número de Scripts NET
+    Valores:
+      6 até 10
+      11 ou Mais
+      1 até 5
+    Tipo:
+      univalorada
+  1_Número de Scripts PG5 Master
+    Valores:
+      21 ou Mais
+      1 até 10
+      11 até 20
+    Tipo:
+      univalorada
+  1_Número de Scripts PG5 Master/Destino
+    Valores:
+      11 até 20
+      21 ou Mais
+      1 até 10
+    Tipo:
+      univalorada
+  1_Número de Versões Acumuladas
+    Valores:
+      7 ou Mais
+      1 até 3
+      4 até 6
+    Tipo:
+      univalorada
+  2_Número de Bases PG5 Atualizadas
+    Valores:
+      24 ou Mais
+      1
+      2 até 23
+    Tipo:
+      univalorada
+  2_Número de Objetos Extras
+    Valores:
+      2 até 3
+      4 ou Mais
+      1
+    Tipo:
+      univalorada
+  2_Número de Objetos IND Client
+    Valores:
+      5 ou Mais
+      1
+      2 até 4
+    Tipo:
+      univalorada
+  2_Número de Objetos NET Client
+    Valores:
+      2 até 4
+      5 ou Mais
+      1
+    Tipo:
+      univalorada
+  2_Número de Objetos PG5 Client
+    Valores:
+      5 ou Mais
+      1
+      2 até 4
+    Tipo:
+      univalorada
+  2_Número de Objetos PSS Client
+    Valores:
+      1
+      5 ou Mais
+      2 até 4
+    Tipo:
+      univalorada
+  2_Número de Scripts EST
+    Valores:
+      6 até 10
+      11 ou Mais
+      1 até 5
+    Tipo:
+      univalorada
+  2_Número de Scripts IND
+    Valores:
+      11 ou Mais
+      1 até 5
+      6 até 10
+    Tipo:
+      univalorada
+  2_Número de Scripts NET
+    Valores:
+      6 até 10
+      11 ou Mais
+      1 até 5
+    Tipo:
+      univalorada
+  2_Número de Scripts PG5 Master
+    Valores:
+      21 ou Mais
+      1 até 10
+      11 até 20
+    Tipo:
+      univalorada
+  2_Número de Scripts PG5 Master/Destino
+    Valores:
+      11 até 20
+      21 ou Mais
+      1 até 10
+    Tipo:
+      univalorada
+  2_Número de Versões Acumuladas
+    Valores:
+      7 ou Mais
+      1 até 3
+      4 até 6
+    Tipo:
+      univalorada
+  3_Número de Bases PG5 Atualizadas
+    Valores:
+      2 até 23
+      24 ou Mais
+      1
+    Tipo:
+      univalorada
+  3_Número de Objetos Extras
+    Valores:
+      5 ou Mais
+      1
+      2 até 4
+    Tipo:
+      univalorada
+  3_Número de Objetos IND Client
+    Valores:
+      3 ou 4
+      5 ou Mais
+      1 ou 2
+    Tipo:
+      univalorada
+  3_Número de Objetos IND Server
+    Valores:
+      6 ou Mais
+      1 até 3
+      4 ou 5
+    Tipo:
+      univalorada
+  3_Número de Objetos NET Client
+    Valores:
+      2 até 4
+      5 ou Mais
+      1
+    Tipo:
+      univalorada
+  3_Número de Objetos NET Server
+    Valores:
+      6 ou Mais
+      1 até 3
+      4 ou 5
+    Tipo:
+      univalorada
+  3_Número de Objetos PG5 Client
+    Valores:
+      3 ou 4
+      5 ou Mais
+      1 ou 2
+    Tipo:
+      univalorada
+  3_Número de Objetos PG5 Server
+    Valores:
+      6 ou Mais
+      1 até 3
+      4 ou 5
+    Tipo:
+      univalorada
+  3_Número de Objetos PSS Client
+    Valores:
+      2 até 4
+      5 ou Mais
+      1
+    Tipo:
+      univalorada
+  3_Número de Scripts EST
+    Valores:
+      1
+      21 ou Mais
+      2 até 20
+    Tipo:
+      univalorada
+  3_Número de Scripts IND
+    Valores:
+      6 até 20
+      1 até 5
+      21 ou Mais
+    Tipo:
+      univalorada
+  3_Número de Scripts NET
+    Valores:
+      1 até 5
+      21 ou Mais
+      6 até 20
+    Tipo:
+      univalorada
+  3_Número de Scripts PG5 Master
+    Valores:
+      6 até 20
+      1 até 5
+      21 ou Mais
+    Tipo:
+      univalorada
+  3_Número de Scripts PG5 Master/Destino
+    Valores:
+      1 ou 2
+      21 ou Mais
+      3 até 20
+    Tipo:
+      univalorada
+  3_Número de Versões Acumuladas
+    Valores:
+      4 até 6
+      1 até 3
+      7 ou Mais
+    Tipo:
+      univalorada
+  4_Número de Bases PG5 Atualizadas
+    Valores:
+      1
+      4 ou Mais
+      2 ou 3
+    Tipo:
+      univalorada
+  4_Número de Objetos Extras
+    Valores:
+      2 até 4
+      1
+      5 ou Mais
+    Tipo:
+      univalorada
+  4_Número de Objetos IND Client
+    Valores:
+      1 até 3
+      5 ou Mais
+      4
+    Tipo:
+      univalorada
+  4_Número de Objetos IND Server
+    Valores:
+      4
+      1 até 3
+      5 ou Mais
+    Tipo:
+      univalorada
+  4_Número de Objetos NET Client
+    Valores:
+      1 até 3
+      5 ou Mais
+      4
+    Tipo:
+      univalorada
+  4_Número de Objetos NET Server
+    Valores:
+      4
+      1 até 3
+      5 ou Mais
+    Tipo:
+      univalorada
+  4_Número de Objetos PG5 Client
+    Valores:
+      1 até 3
+      5 ou Mais
+      4
+    Tipo:
+      univalorada
+  4_Número de Objetos PG5 Server
+    Valores:
+      4
+      1 até 3
+      5 ou Mais
+    Tipo:
+      univalorada
+  4_Número de Objetos PSS Client
+    Valores:
+      1
+      3 ou Mais
+      2
+    Tipo:
+      univalorada
+  4_Número de Scripts EST
+    Valores:
+      6 até 20
+      1 até 5
+      21 ou Mais
+    Tipo:
+      univalorada
+  4_Número de Scripts IND
+    Valores:
+      1 até 5
+      21 ou Mais
+      6 até 20
+    Tipo:
+      univalorada
+  4_Número de Scripts NET
+    Valores:
+      6 até 20
+      1 até 5
+      21 ou Mais
+    Tipo:
+      univalorada
+  4_Número de Scripts PG5 Master
+    Valores:
+      1 até 5
+      21 ou Mais
+      6 até 20
+    Tipo:
+      univalorada
+  4_Número de Scripts PG5 Master/Destino
+    Valores:
+      11 até 10
+      1 até 10
+      21 ou Mais
+    Tipo:
+      univalorada
+  4_Número de Versões Acumuladas
+    Valores:
+      1
+      5 ou Mais
+      2 até 4
+    Tipo:
+      univalorada
+  5_Número de Bases PG5 Atualizadas
+    Valores:
+      2 até 4
+      1
+      5 ou Mais
+    Tipo:
+      univalorada
+  5_Número de Objetos Extras
+    Valores:
+      1
+      3 ou Mais
+      2
+    Tipo:
+      univalorada
+  5_Número de Objetos PG5 Client
+    Valores:
+      2
+      1
+      3 ou Mais
+    Tipo:
+      univalorada
+  5_Número de Objetos PG5 Server
+    Valores:
+      1 até 3
+      5 ou Mais
+      4
+    Tipo:
+      univalorada
+  5_Número de Scripts PG5 Master
+    Valores:
+      6 até 20
+      1 até 5
+      21 ou Mais
+    Tipo:
+      univalorada
+  5_Número de Scripts PG5 Master/Destino
+    Valores:
+      1 até 5
+      21 ou Mais
+      6 até 20
+    Tipo:
+      univalorada
+  5_Número de Versões Acumuladas
+    Valores:
+      2 até 4
+      1
+      5 ou Mais
+    Tipo:
+      univalorada
+  6_Número de Bases PG5 Atualizadas
+    Valores:
+      1
+      2 ou Mais
+    Tipo:
+      univalorada
+  6_Número de Objetos EST Client
+    Valores:
+      1
+      2 ou Mais
+    Tipo:
+      univalorada
+  6_Número de Objetos EST Server
+    Valores:
+      1 até 3
+      4 ou Mais
+    Tipo:
+      univalorada
+  6_Número de Objetos Extras
+    Valores:
+      1 ou 2
+      3 ou Mais
+    Tipo:
+      univalorada
+  6_Número de Scripts EST
+    Valores:
+      1 até 5
+      6 ou Mais
+    Tipo:
+      univalorada
+  6_Número de Scripts PG5 Master
+    Valores:
+      1 até 5
+      6 ou Mais
+    Tipo:
+      univalorada
+  6_Número de Scripts PG5 Master/Destino
+    Valores:
+      1 até 5
+      6 ou Mais
+    Tipo:
+      univalorada
+  6_Número de Versões Acumuladas
+    Valores:
+      1
+      2 ou Mais
+    Tipo:
+      univalorada
+  Criticidade da Versão
+    Valores:
+      Criticidade Alta
+      Criticidade Baixa
+      Criticidade Média
+    Tipo:
+      univalorada
+  Tipo de Liberação
+    Valores:
+      Versão EST
+      Client/Server Implementação
+      Client
+      Versão PRECAT
+      Client/Server Correção
+      Server
+    Tipo:
+      univalorada
+
+OBJETIVOS
+
+  Criticidade da Versão
+
+REGRAS
+
+  Regra 1
+    SE Tipo de Liberação = Server
+    E  1_Número de Versões Acumuladas = 1 até 3
+    E  1_Número de Bases PG5 Atualizadas = 1
+    OU 1_Número de Bases PG5 Atualizadas = 2 até 23
+    OU 1_Número de Bases PG5 Atualizadas = 24 ou Mais
+    E  1_Número de Objetos PG5 Server = 1 até 3
+    E  1_Número de Objetos NET Server = 1 até 3
+    E  1_Número de Objetos IND Server = 1 até 3
+    E  1_Número de Objetos Extras = 1
+    E  1_Número de Scripts PG5 Master = 1 até 10
+    E  1_Número de Scripts PG5 Master/Destino = 1 até 10
+    E  1_Número de Scripts NET = 1 até 5
+    E  1_Número de Scripts IND = 1 até 5
+    E  1_Número de Scripts EST = 1
+    ENTÃO Criticidade da Versão = Criticidade Baixa CNF 100%
+
+  Regra 2
+    SE Tipo de Liberação = Client
+    E  2_Número de Versões Acumuladas = 1 até 3
+    E  2_Número de Bases PG5 Atualizadas = 1
+    OU 2_Número de Bases PG5 Atualizadas = 2 até 23
+    OU 2_Número de Bases PG5 Atualizadas = 24 ou Mais
+    E  2_Número de Objetos PG5 Client = 1
+    E  2_Número de Objetos NET Client = 1
+    E  2_Número de Objetos IND Client = 1
+    E  2_Número de Objetos Extras = 1
+    E  2_Número de Objetos PSS Client = 1
+    E  2_Número de Scripts PG5 Master = 1 até 10
+    E  2_Número de Scripts PG5 Master/Destino = 1 até 10
+    E  2_Número de Scripts NET = 1 até 5
+    E  2_Número de Scripts IND = 1 até 5
+    E  2_Número de Scripts EST = 1 até 5
+    ENTÃO Criticidade da Versão = Criticidade Baixa CNF 100%
+
+  Regra 3
+    SE Tipo de Liberação = Client/Server Correção
+    E  3_Número de Versões Acumuladas = 1 até 3
+    E  3_Número de Bases PG5 Atualizadas = 1
+    OU 3_Número de Bases PG5 Atualizadas = 2 até 23
+    OU 3_Número de Bases PG5 Atualizadas = 24 ou Mais
+    E  3_Número de Objetos PG5 Server = 1 até 3
+    E  3_Número de Objetos PG5 Client = 1 ou 2
+    E  3_Número de Objetos NET Server = 1 até 3
+    E  3_Número de Objetos NET Client = 1
+    E  3_Número de Objetos IND Server = 1 até 3
+    E  3_Número de Objetos IND Client = 1 ou 2
+    E  3_Número de Objetos PSS Client = 1
+    E  3_Número de Objetos Extras = 1
+    E  3_Número de Scripts PG5 Master = 1 até 5
+    E  3_Número de Scripts PG5 Master/Destino = 1 ou 2
+    E  3_Número de Scripts NET = 1 até 5
+    E  3_Número de Scripts IND = 1 até 5
+    E  3_Número de Scripts EST = 1
+    ENTÃO Criticidade da Versão = Criticidade Baixa CNF 100%
+
+  Regra 4
+    SE Tipo de Liberação = Client/Server Implementação
+    E  4_Número de Versões Acumuladas = 1
+    E  4_Número de Bases PG5 Atualizadas = 1
+    OU 4_Número de Bases PG5 Atualizadas = 2 ou 3
+    OU 4_Número de Bases PG5 Atualizadas = 4 ou Mais
+    E  4_Número de Objetos PG5 Server = 1 até 3
+    E  4_Número de Objetos PG5 Client = 1 até 3
+    E  4_Número de Objetos NET Server = 1 até 3
+    E  4_Número de Objetos NET Client = 1 até 3
+    E  4_Número de Objetos IND Server = 1 até 3
+    E  4_Número de Objetos IND Client = 1 até 3
+    E  4_Número de Objetos PSS Client = 1
+    E  4_Número de Objetos Extras = 1
+    E  4_Número de Scripts PG5 Master = 1 até 5
+    E  4_Número de Scripts PG5 Master/Destino = 1 até 10
+    E  4_Número de Scripts NET = 1 até 5
+    E  4_Número de Scripts IND = 1 até 5
+    E  4_Número de Scripts EST = 1 até 5
+    ENTÃO Criticidade da Versão = Criticidade Baixa CNF 100%
+
+  Regra 5
+    SE Tipo de Liberação = Versão PRECAT
+    E  5_Número de Versões Acumuladas = 1
+    E  5_Número de Bases PG5 Atualizadas = 1
+    E  5_Número de Objetos PG5 Server = 1 até 3
+    E  5_Número de Objetos PG5 Client = 1
+    E  5_Número de Objetos Extras = 1
+    E  5_Número de Scripts PG5 Master = 1 até 5
+    E  5_Número de Scripts PG5 Master/Destino = 1 até 5
+    ENTÃO Criticidade da Versão = Criticidade Baixa CNF 100%
+
+  Regra 6
+    SE Tipo de Liberação = Versão EST
+    E  6_Número de Versões Acumuladas = 1
+    E  6_Número de Bases PG5 Atualizadas = 1
+    E  6_Número de Objetos EST Server = 1 até 3
+    E  6_Número de Objetos EST Client = 1
+    E  6_Número de Objetos Extras = 1 ou 2
+    E  6_Número de Scripts PG5 Master = 1 até 5
+    E  6_Número de Scripts PG5 Master/Destino = 1 até 5
+    ENTÃO Criticidade da Versão = Criticidade Média CNF 100%
+
+  Regra 7
+    SE Tipo de Liberação = Server
+    E  1_Número de Versões Acumuladas = 4 até 6
+    E  1_Número de Bases PG5 Atualizadas = 2 até 23
+    E  1_Número de Objetos PG5 Server = 4 ou 5
+    E  1_Número de Objetos NET Server = 4 ou 5
+    E  1_Número de Objetos IND Server = 4 ou 5
+    E  1_Número de Objetos Extras = 2 até 4
+    E  1_Número de Scripts PG5 Master = 11 até 20
+    E  1_Número de Scripts PG5 Master/Destino = 11 até 20
+    E  1_Número de Scripts NET = 6 até 10
+    E  1_Número de Scripts IND = 6 até 10
+    E  1_Número de Scripts EST = 2 até 10
+    ENTÃO Criticidade da Versão = Criticidade Média CNF 100%
+
+  Regra 8
+    SE Tipo de Liberação = Client
+    E  2_Número de Versões Acumuladas = 4 até 6
+    E  2_Número de Bases PG5 Atualizadas = 2 até 23
+    E  2_Número de Objetos PG5 Client = 2 até 4
+    E  2_Número de Objetos NET Client = 2 até 4
+    E  2_Número de Objetos IND Client = 2 até 4
+    E  2_Número de Objetos Extras = 2 até 3
+    E  2_Número de Objetos PSS Client = 2 até 4
+    E  2_Número de Scripts PG5 Master = 11 até 20
+    E  2_Número de Scripts PG5 Master/Destino = 11 até 20
+    E  2_Número de Scripts NET = 6 até 10
+    E  2_Número de Scripts IND = 6 até 10
+    E  2_Número de Scripts EST = 6 até 10
+    ENTÃO Criticidade da Versão = Criticidade Média CNF 100%
+
+  Regra 9
+    SE Tipo de Liberação = Client/Server Correção
+    E  3_Número de Versões Acumuladas = 4 até 6
+    E  3_Número de Bases PG5 Atualizadas = 2 até 23
+    E  3_Número de Objetos PG5 Server = 4 ou 5
+    E  3_Número de Objetos PG5 Client = 3 ou 4
+    E  3_Número de Objetos NET Server = 4 ou 5
+    E  3_Número de Objetos NET Client = 2 até 4
+    E  3_Número de Objetos IND Server = 4 ou 5
+    E  3_Número de Objetos IND Client = 3 ou 4
+    E  3_Número de Objetos PSS Client = 2 até 4
+    E  3_Número de Objetos Extras = 2 até 4
+    E  3_Número de Scripts PG5 Master = 6 até 20
+    E  3_Número de Scripts PG5 Master/Destino = 3 até 20
+    E  3_Número de Scripts NET = 6 até 20
+    E  3_Número de Scripts IND = 6 até 20
+    E  3_Número de Scripts EST = 2 até 20
+    ENTÃO Criticidade da Versão = Criticidade Média CNF 100%
+
+  Regra 10
+    SE Tipo de Liberação = Client/Server Implementação
+    E  4_Número de Versões Acumuladas = 2 até 4
+    E  4_Número de Bases PG5 Atualizadas = 2 ou 3
+    E  4_Número de Objetos PG5 Server = 4
+    E  4_Número de Objetos PG5 Client = 4
+    E  4_Número de Objetos NET Server = 4
+    E  4_Número de Objetos NET Client = 4
+    E  4_Número de Objetos IND Server = 4
+    E  4_Número de Objetos IND Client = 4
+    E  4_Número de Objetos PSS Client = 2
+    E  4_Número de Objetos Extras = 2 até 4
+    E  4_Número de Scripts PG5 Master = 6 até 20
+    E  4_Número de Scripts PG5 Master/Destino = 11 até 10
+    E  4_Número de Scripts NET = 6 até 20
+    E  4_Número de Scripts IND = 6 até 20
+    E  4_Número de Scripts EST = 6 até 20
+    ENTÃO Criticidade da Versão = Criticidade Média CNF 100%
+
+  Regra 11
+    SE Tipo de Liberação = Versão PRECAT
+    E  5_Número de Versões Acumuladas = 2 até 4
+    E  5_Número de Bases PG5 Atualizadas = 2 até 4
+    E  5_Número de Objetos PG5 Server = 4
+    E  5_Número de Objetos PG5 Client = 2
+    E  5_Número de Objetos Extras = 2
+    E  5_Número de Scripts PG5 Master = 6 até 20
+    E  5_Número de Scripts PG5 Master/Destino = 6 até 20
+    ENTÃO Criticidade da Versão = Criticidade Média CNF 100%
+
+  Regra 12
+    SE Tipo de Liberação = Server
+    E  1_Número de Versões Acumuladas = 7 ou Mais
+    E  1_Número de Bases PG5 Atualizadas = 24 ou Mais
+    E  1_Número de Objetos PG5 Server = 6 ou Mais
+    E  1_Número de Objetos NET Server = 6 ou Mais
+    E  1_Número de Objetos IND Server = 6 ou Mais
+    E  1_Número de Objetos Extras = 5 ou Mais
+    E  1_Número de Scripts PG5 Master = 21 ou Mais
+    E  1_Número de Scripts PG5 Master/Destino = 21 ou Mais
+    E  1_Número de Scripts NET = 11 ou Mais
+    E  1_Número de Scripts IND = 11 ou Mais
+    E  1_Número de Scripts EST = 11 ou Mais
+    ENTÃO Criticidade da Versão = Criticidade Alta CNF 100%
+
+  Regra 13
+    SE Tipo de Liberação = Client
+    E  2_Número de Versões Acumuladas = 7 ou Mais
+    E  2_Número de Bases PG5 Atualizadas = 24 ou Mais
+    E  2_Número de Objetos PG5 Client = 5 ou Mais
+    E  2_Número de Objetos NET Client = 5 ou Mais
+    E  2_Número de Objetos IND Client = 5 ou Mais
+    E  2_Número de Objetos Extras = 4 ou Mais
+    E  2_Número de Objetos PSS Client = 5 ou Mais
+    E  2_Número de Scripts PG5 Master = 21 ou Mais
+    E  2_Número de Scripts PG5 Master/Destino = 21 ou Mais
+    E  2_Número de Scripts NET = 11 ou Mais
+    E  2_Número de Scripts IND = 11 ou Mais
+    E  2_Número de Scripts EST = 11 ou Mais
+    ENTÃO Criticidade da Versão = Criticidade Alta CNF 100%
+
+  Regra 14
+    SE Tipo de Liberação = Client/Server Implementação
+    E  4_Número de Versões Acumuladas = 5 ou Mais
+    E  4_Número de Bases PG5 Atualizadas = 4 ou Mais
+    E  4_Número de Objetos PG5 Server = 5 ou Mais
+    E  4_Número de Objetos PG5 Client = 5 ou Mais
+    E  4_Número de Objetos NET Server = 5 ou Mais
+    E  4_Número de Objetos NET Client = 5 ou Mais
+    E  4_Número de Objetos IND Server = 5 ou Mais
+    E  4_Número de Objetos IND Client = 5 ou Mais
+    E  4_Número de Objetos PSS Client = 3 ou Mais
+    E  4_Número de Objetos Extras = 5 ou Mais
+    E  4_Número de Scripts PG5 Master = 21 ou Mais
+    E  4_Número de Scripts PG5 Master/Destino = 21 ou Mais
+    E  4_Número de Scripts NET = 21 ou Mais
+    E  4_Número de Scripts IND = 21 ou Mais
+    E  4_Número de Scripts EST = 21 ou Mais
+    ENTÃO Criticidade da Versão = Criticidade Alta CNF 100%
+
+  Regra 15
+    SE Tipo de Liberação = Client/Server Correção
+    E  3_Número de Versões Acumuladas = 7 ou Mais
+    E  3_Número de Bases PG5 Atualizadas = 24 ou Mais
+    E  3_Número de Objetos PG5 Server = 6 ou Mais
+    E  3_Número de Objetos PG5 Client = 5 ou Mais
+    E  3_Número de Objetos NET Server = 6 ou Mais
+    E  3_Número de Objetos NET Client = 5 ou Mais
+    E  3_Número de Objetos IND Server = 6 ou Mais
+    E  3_Número de Objetos IND Client = 5 ou Mais
+    E  3_Número de Objetos PSS Client = 5 ou Mais
+    E  3_Número de Objetos Extras = 5 ou Mais
+    E  3_Número de Scripts PG5 Master = 21 ou Mais
+    E  3_Número de Scripts PG5 Master/Destino = 21 ou Mais
+    E  3_Número de Scripts NET = 21 ou Mais
+    E  3_Número de Scripts IND = 21 ou Mais
+    E  3_Número de Scripts EST = 21 ou Mais
+    ENTÃO Criticidade da Versão = Criticidade Alta CNF 100%
+
+  Regra 16
+    SE Tipo de Liberação = Versão PRECAT
+    E  5_Número de Versões Acumuladas = 5 ou Mais
+    E  5_Número de Bases PG5 Atualizadas = 5 ou Mais
+    E  5_Número de Objetos PG5 Server = 5 ou Mais
+    E  5_Número de Objetos PG5 Client = 3 ou Mais
+    E  5_Número de Objetos Extras = 3 ou Mais
+    E  5_Número de Scripts PG5 Master = 21 ou Mais
+    E  5_Número de Scripts PG5 Master/Destino = 21 ou Mais
+    ENTÃO Criticidade da Versão = Criticidade Alta CNF 100%
+
+  Regra 17
+    SE Tipo de Liberação = Versão EST
+    E  6_Número de Versões Acumuladas = 2 ou Mais
+    E  6_Número de Bases PG5 Atualizadas = 2 ou Mais
+    E  6_Número de Objetos EST Server = 4 ou Mais
+    E  6_Número de Objetos EST Client = 2 ou Mais
+    E  6_Número de Objetos Extras = 3 ou Mais
+    E  6_Número de Scripts PG5 Master = 6 ou Mais
+    E  6_Número de Scripts PG5 Master/Destino = 6 ou Mais
+    ENTÃO Criticidade da Versão = Criticidade Alta CNF 100%
+
+PERGUNTAS
+
+  Variável:1_Número de Bases PG5 Atualizadas
+     Pergunta:"Quantas Bases PG5/NET/IND/EST serão atualizadas?"
+  Variável:1_Número de Objetos Extras
+     Pergunta:"Quantos Objetos Extras serão atualizados?"
+  Variável:1_Número de Objetos IND Server
+     Pergunta:"Qual o Número de Objetos IND Server serão atualizados?"
+  Variável:1_Número de Objetos NET Server
+     Pergunta:"Qual o Número de Objetos NET Server serão atualizados?"
+  Variável:1_Número de Objetos PG5 Server
+     Pergunta:"Qual o Número de Objetos PG5 Server serão atualizados?"
+  Variável:1_Número de Scripts EST
+     Pergunta:"Qual o Número de Scripts EST serão executados?"
+  Variável:1_Número de Scripts IND
+     Pergunta:"Qual o Número de Scripts IND serão executados?"
+  Variável:1_Número de Scripts NET
+     Pergunta:"Qual o Número de Scripts NET serão executados?"
+  Variável:1_Número de Scripts PG5 Master
+     Pergunta:"Qual o Número de Scripts PG5 Base Master serão executados?"
+  Variável:1_Número de Scripts PG5 Master/Destino
+     Pergunta:"Qual o Número de Scripts PG5 Bases Destino serão executados?"
+  Variável:1_Número de Versões Acumuladas
+     Pergunta:"Qual o Número de Versões Acumuladas que será atualizado?"
+  Variável:2_Número de Bases PG5 Atualizadas
+     Pergunta:"Quantas Bases PG5/NET/IND/EST serão atualizadas?"
+  Variável:2_Número de Objetos Extras
+     Pergunta:"Quantos Objetos Extras serão atualizados?"
+  Variável:2_Número de Objetos IND Client
+     Pergunta:"Qual o Número de Objetos IND Client serão atualizados?"
+  Variável:2_Número de Objetos NET Client
+     Pergunta:"Qual o Número de Objetos NET Client serão atualizados?"
+  Variável:2_Número de Objetos PG5 Client
+     Pergunta:"Qual o Número de Objetos PG5 Client serão atualizados?"
+  Variável:2_Número de Objetos PSS Client
+     Pergunta:"Qual o Número de Objetos PSS Client serão atualizados?"
+  Variável:2_Número de Scripts EST
+     Pergunta:"Qual o Número de Scripts EST serão executados?"
+  Variável:2_Número de Scripts IND
+     Pergunta:"Qual o Número de Scripts IND serão executados?"
+  Variável:2_Número de Scripts NET
+     Pergunta:"Qual o Número de Scripts NET serão executados?"
+  Variável:2_Número de Scripts PG5 Master
+     Pergunta:"Qual o Número de Scripts PG5 Base Master serão executados?"
+  Variável:2_Número de Scripts PG5 Master/Destino
+     Pergunta:"Qual o Número de Scripts PG5 Bases Destino serão executados?"
+  Variável:2_Número de Versões Acumuladas
+     Pergunta:"Qual o Número de Versões Acumuladas que serão atualizadas?"
+  Variável:3_Número de Bases PG5 Atualizadas
+     Pergunta:"Quantas Bases PG5/NET/IND/EST serão atualizadas?"
+  Variável:3_Número de Objetos Extras
+     Pergunta:"Quantos Objetos Extras serão atualizados?"
+  Variável:3_Número de Objetos IND Client
+     Pergunta:"Qual o Número de Objetos IND Client serão atualizados?"
+  Variável:3_Número de Objetos IND Server
+     Pergunta:"Qual o Número de Objetos IND Server serão atualizados?"
+  Variável:3_Número de Objetos NET Client
+     Pergunta:"Qual o Número de Objetos NET Client serão atualizados?"
+  Variável:3_Número de Objetos NET Server
+     Pergunta:"Qual o Número de Objetos NET Server serão atualizados?"
+  Variável:3_Número de Objetos PG5 Client
+     Pergunta:"Qual o Número de Objetos PG5 Client serão atualizados?"
+  Variável:3_Número de Objetos PG5 Server
+     Pergunta:"Qual o Número de Objetos PG5 Server serão atualizados?"
+  Variável:3_Número de Objetos PSS Client
+     Pergunta:"Qual o Número de Objetos PSS Client serão atualizados?"
+  Variável:3_Número de Scripts EST
+     Pergunta:"Qual o Número de Scripts EST serão executados?"
+  Variável:3_Número de Scripts IND
+     Pergunta:"Qual o Número de Scripts IND serão executados?"
+  Variável:3_Número de Scripts NET
+     Pergunta:"Qual o Número de Scripts NET serão executados?"
+  Variável:3_Número de Scripts PG5 Master
+     Pergunta:"Qual o Número de Scripts PG5 Base Master serão executados?"
+  Variável:3_Número de Scripts PG5 Master/Destino
+     Pergunta:"Qual o Número de Scripts PG5 Bases Destino serão executados?"
+  Variável:3_Número de Versões Acumuladas
+     Pergunta:"Qual o Número de Versões Acumuladas que serão atualizadas?"
+  Variável:4_Número de Bases PG5 Atualizadas
+     Pergunta:"Quantas Bases PG5/NET/IND/EST serão atualizadas?"
+  Variável:4_Número de Objetos Extras
+     Pergunta:"Quantos Objetos Extras serão atualizados?"
+  Variável:4_Número de Objetos IND Client
+     Pergunta:"Qual o Número de Objetos IND Client serão atualizados?"
+  Variável:4_Número de Objetos IND Server
+     Pergunta:"Qual o Número de Objetos IND Server serão atualizados?"
+  Variável:4_Número de Objetos NET Client
+     Pergunta:"Qual o Número de Objetos NET Client serão atualizados?"
+  Variável:4_Número de Objetos NET Server
+     Pergunta:"Qual o Número de Objetos NET Server serão atualizados?"
+  Variável:4_Número de Objetos PG5 Client
+     Pergunta:"Qual o Número de Objetos PG5 Client serão atualizados?"
+  Variável:4_Número de Objetos PG5 Server
+     Pergunta:"Qual o Número de Objetos PG5 Server serão atualizados?"
+  Variável:4_Número de Objetos PSS Client
+     Pergunta:"Qual o Número de Objetos PSS Client serão atualizados?"
+  Variável:4_Número de Scripts EST
+     Pergunta:"Qual o Número de Scripts EST serão executados?"
+  Variável:4_Número de Scripts IND
+     Pergunta:"Qual o Número de Scripts IND serão executados?"
+  Variável:4_Número de Scripts NET
+     Pergunta:"Qual o Número de Scripts NET serão executados?"
+  Variável:4_Número de Scripts PG5 Master
+     Pergunta:"Qual o Número de Scripts PG5 Base Master serão executados?"
+  Variável:4_Número de Scripts PG5 Master/Destino
+     Pergunta:"Qual o Número de Scripts PG5 Bases Destino serão executados?"
+  Variável:4_Número de Versões Acumuladas
+     Pergunta:"Qual o Número de Versões Acumuladas que serão atualizadas?"
+  Variável:5_Número de Bases PG5 Atualizadas
+     Pergunta:"Quantas Bases PG5 serão atualizadas?"
+  Variável:5_Número de Objetos Extras
+     Pergunta:"Quantos Objetos Extras serão atualizados?"
+  Variável:5_Número de Objetos PG5 Client
+     Pergunta:"Qual o Número de Objetos PG5 Client serão atualizados?"
+  Variável:5_Número de Objetos PG5 Server
+     Pergunta:"Qual o Número de Objetos PG5 Server serão atualizados?"
+  Variável:5_Número de Scripts PG5 Master
+     Pergunta:"Qual o Número de Scripts PG5 Base Master serão executados?"
+  Variável:5_Número de Scripts PG5 Master/Destino
+     Pergunta:"Qual o Número de Scripts PG5 Bases Destino serão executados?"
+  Variável:5_Número de Versões Acumuladas
+     Pergunta:"Qual o Número de Versões Acumuladas que serão atualizadas?"
+  Variável:6_Número de Bases PG5 Atualizadas
+     Pergunta:"Quantas Bases PG5/EST serão atualizadas?"
+  Variável:6_Número de Objetos EST Client
+     Pergunta:"Qual o Número de Objetos EST Client serão atualizados?"
+  Variável:6_Número de Objetos EST Server
+     Pergunta:"Qual o Número de Objetos EST Server serão atualizados?"
+  Variável:6_Número de Objetos Extras
+     Pergunta:"Quantos Objetos Extras serão atualizados?"
+  Variável:6_Número de Scripts EST
+     Pergunta:"Qual o Número de Scripts EST serão executados?"
+  Variável:6_Número de Scripts PG5 Master
+     Pergunta:"Qual o Número de Scripts PG5 Base Master serão executados?"
+  Variável:6_Número de Scripts PG5 Master/Destino
+     Pergunta:"Qual o Número de Scripts PG5 Bases Destino serão executados?"
+  Variável:6_Número de Versões Acumuladas
+     Pergunta:"Qual o Número de Versões Acumuladas que serão atualizadas?"
+  Variável:Tipo de Liberação
+     Pergunta:"Qual o Tipo de Liberação que será executado?"
+
+--------------------------------------------------------------------------------
+Gerado com o Expert SINTA versão 1.1b
+(c) 1997 - Universidade Federal do Ceará
+           Laboratório de Inteligência Artificial
+           LIA/UFC
+--------------------------------------------------------------------------------

@@ -1,0 +1,189 @@
+--------------------------------------------------------------------------------
+CÓDIGOS INTERNOS DE BASE DE CONHECIMENTO
+SOBRE O SISTEMA ESPECIALISTA
+  -- Nome:    SEM NOME
+  -- Autores: 
+
+SOBRE OS ARQUIVOS
+  Arquivo original: C:\Users\profm\Downloads\indicadorDeCompraDeComputadores.bcm
+  O sistema não possui recursos de ajuda.
+--------------------------------------------------------------------------------
+
+Variáveis - CÓDIGO, NOME
+
+1, TEMPO_UTILIZACAO
+2, PROCESSADOR
+3, UTILIZA TRABALHO
+4, TIPO LAZER
+5, UTILIZA LAZER
+6, MEMORIA RAM
+7, PLACA DE VIDEO
+8, ARMAZENAMENTO
+
+Variáveis - NOME, CÓDIGO
+
+ARMAZENAMENTO, 8
+MEMORIA RAM, 6
+PLACA DE VIDEO, 7
+PROCESSADOR, 2
+TEMPO_UTILIZACAO, 1
+TIPO LAZER, 4
+UTILIZA LAZER, 5
+UTILIZA TRABALHO, 3
+
+Valores - CÓDIGO, NOME, CÓDIGO DA VARIÁVEL, POSIÇÃO
+
+1, 0 - 4 HORAS , 1, 1
+2, 4 HORAS ++, 1, 2
+3, Dual-Core, 2, 1
+4, Quad-Core, 2, 2
+5, SIM, 3, 1
+6, NÃO, 3, 2
+7, Six-Core, 2, 3
+8, Octa-Core, 2, 4
+9, Nenhum, 2, 5
+10, Nenhum, 7, 3
+11, NAVEGAR NA INTERNET, 4, 1
+12, JOGAR, 4, 2
+13, SIM, 5, 1
+14, NÃO, 5, 2
+15, Nenhum, 6, 4
+16, 4 GB, 6, 1
+17, Nenhum, 8, 5
+19, 8 GB, 6, 2
+20, 16 GB, 6, 3
+21, SIM, 7, 1
+22, NÃO, 7, 2
+23, 500 GB de HD, 8, 1
+24, 1000 GB de HD, 8, 2
+25, 500 GB de SSD, 8, 3
+26, 1000 GB de SSD, 8, 4
+
+Valores - NOME, CÓDIGO, CÓDIGO DA VARIÁVEL, POSIÇÃO
+
+0 - 4 HORAS , 1, 1, 1
+1000 GB de HD, 24, 8, 2
+1000 GB de SSD, 26, 8, 4
+16 GB, 20, 6, 3
+4 GB, 16, 6, 1
+4 HORAS ++, 2, 1, 2
+500 GB de HD, 23, 8, 1
+500 GB de SSD, 25, 8, 3
+8 GB, 19, 6, 2
+Dual-Core, 3, 2, 1
+JOGAR, 12, 4, 2
+NAVEGAR NA INTERNET, 11, 4, 1
+Nenhum, 15, 6, 4
+Nenhum, 17, 8, 5
+Nenhum, 9, 2, 5
+Nenhum, 10, 7, 3
+NÃO, 22, 7, 2
+NÃO, 14, 5, 2
+NÃO, 6, 3, 2
+Octa-Core, 8, 2, 4
+Quad-Core, 4, 2, 2
+SIM, 13, 5, 1
+SIM, 5, 3, 1
+SIM, 21, 7, 1
+Six-Core, 7, 2, 3
+
+Valores - CÓDIGO DA VARIÁVEL, CÓDIGO, NOME, POSIÇÃO
+
+1, 1, 0 - 4 HORAS , 1
+1, 2, 4 HORAS ++, 2
+2, 9, Nenhum, 5
+2, 7, Six-Core, 3
+2, 3, Dual-Core, 1
+2, 8, Octa-Core, 4
+2, 4, Quad-Core, 2
+3, 5, SIM, 1
+3, 6, NÃO, 2
+4, 11, NAVEGAR NA INTERNET, 1
+4, 12, JOGAR, 2
+5, 13, SIM, 1
+5, 14, NÃO, 2
+6, 15, Nenhum, 4
+6, 20, 16 GB, 3
+6, 16, 4 GB, 1
+6, 19, 8 GB, 2
+7, 22, NÃO, 2
+7, 10, Nenhum, 3
+7, 21, SIM, 1
+8, 17, Nenhum, 5
+8, 24, 1000 GB de HD, 2
+8, 26, 1000 GB de SSD, 4
+8, 23, 500 GB de HD, 1
+8, 25, 500 GB de SSD, 3
+
+Regras - POSIÇÃO, NOME, CÓDIGO
+
+1, 4, 1
+2, 4 N, 3
+3, 4 S, 2
+4, 4 N N, 16
+5, 4 S N, 17
+6, 4 N S NI, 4
+7, 4 N S J, 5
+8, 4 S S NI, 6
+9, 4 S S J, 7
+10, 4+, 8
+11, 4+ N, 9
+12, 4+ S, 10
+13, 4+ N N, 11
+14, 4+ S N, 12
+15, 4+ N S NI, 13
+16, 4+ N S J, 14
+17, 4+ S S NI, 15
+18, 4+ S S J, 18
+
+Regras - CÓDIGO, NOME, POSIÇÃO
+
+1, 4, 1
+2, 4 S, 3
+3, 4 N, 2
+4, 4 N S NI, 6
+5, 4 N S J, 7
+6, 4 S S NI, 8
+7, 4 S S J, 9
+8, 4+, 10
+9, 4+ N, 11
+10, 4+ S, 12
+11, 4+ N N, 13
+12, 4+ S N, 14
+13, 4+ N S NI, 15
+14, 4+ N S J, 16
+15, 4+ S S NI, 17
+16, 4 N N, 4
+17, 4 S N, 5
+18, 4+ S S J, 18
+
+Regras - NOME, CÓDIGO, POSIÇÃO
+
+4, 1, 1
+4 N, 3, 2
+4 N N, 16, 4
+4 N S J, 5, 7
+4 N S NI, 4, 6
+4 S, 2, 3
+4 S N, 17, 5
+4 S S J, 7, 9
+4 S S NI, 6, 8
+4+, 8, 10
+4+ N, 9, 11
+4+ N N, 11, 13
+4+ N S J, 14, 16
+4+ N S NI, 13, 15
+4+ S, 10, 12
+4+ S N, 12, 14
+4+ S S J, 18, 18
+4+ S S NI, 15, 17
+
+--------------------------------------------------------------------------------
+Gerado com o Expert SINTA versão 1.1b
+(c) 1997 - Universidade Federal do Ceará
+           Laboratório de Inteligência Artificial
+           LIA/UFC
+
+           Utilize esses códigos na programação
+           de front-ends com a Expert SINTA VCL
+--------------------------------------------------------------------------------
